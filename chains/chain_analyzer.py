@@ -87,22 +87,22 @@ class ChainStep:
 
 @dataclass
 class AttackChain:
- """Represents a complete attack chain"""
- title: str
- description: str
- steps: List[ChainStep] = field(default_factory=list)
- impact: ImpactLevel = ImpactLevel.MEDIUM
- severity: str = ""
- prerequisites: List[str] = field(default_factory=list)
- context: Optional[str] = None
- discovered_by: Optional[str] = None
- discovered_at: Optional[datetime] = None
- validated: bool = False
- tags: Set[str] = field(default_factory=set)
- 
- def __post_init__(self):
- if self.discovered_at is None:
- self.discovered_at = datetime.now()
+    """Represents a complete attack chain"""
+    title: str
+    description: str
+    steps: List[ChainStep] = field(default_factory=list)
+    impact: ImpactLevel = ImpactLevel.MEDIUM
+    severity: str = ""
+    prerequisites: List[str] = field(default_factory=list)
+    context: Optional[str] = None
+    discovered_by: Optional[str] = None
+    discovered_at: Optional[datetime] = None
+    validated: bool = False
+    tags: Set[str] = field(default_factory=set)
+    
+    def __post_init__(self):
+        if self.discovered_at is None:
+            self.discovered_at = datetime.now()
  
  def add_step(self, step: ChainStep):
  """Add a step to the chain"""
