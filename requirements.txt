@@ -18,8 +18,11 @@ requests>=2.31.0
 # graphviz>=0.20.1 # Uncomment if using graphviz for diagrams
 # matplotlib>=3.7.0 # Uncomment if using matplotlib for charts
 
-# Optional: For PDF report generation (future feature)
-# reportlab>=4.0.0 # Uncomment when implementing PDF export
+# For PDF report generation
+reportlab>=4.0.0
+
+# For Word/DOCX export
+python-docx>=1.1.0
 
 # Optional: For OWASP ZAP integration (future feature)
 # python-owasp-zap-v2.4>=0.0.20 # Uncomment when implementing ZAP integration
@@ -31,4 +34,5 @@ requests>=2.31.0
 # pytest>=7.4.0 # For running tests
 # black>=23.0.0 # For code formatting
 # flake8>=6.0.0 # For linting
+
 

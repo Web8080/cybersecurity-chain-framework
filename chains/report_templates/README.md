@@ -40,3 +40,4 @@ Reports can be customized by modifying `report_generator.py`:
 - Include additional metadata
 - Add custom recommendations
 
+

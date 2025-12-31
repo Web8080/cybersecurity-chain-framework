@@ -478,3 +478,4 @@ if __name__ == "__main__":
     generator.export_to_markdown(chain, "example_report.md")
     print("\nExample report exported to: example_report.md")
 
+

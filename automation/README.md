@@ -58,3 +58,4 @@ if scanner.check_connection():
 - Integrates with `chain_analyzer.py` for chain suggestions
 - Works with `target_manager.py` for target management
 
+

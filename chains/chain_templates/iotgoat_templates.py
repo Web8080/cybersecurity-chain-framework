@@ -172,3 +172,4 @@ if __name__ == "__main__":
  
  print(f"\n Total: {len(templates)} templates")
 
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Example Attack Chain - Security Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        h1 { color: #333; border-bottom: 2px solid #333; }
+        h2 { color: #555; margin-top: 30px; }
+        h3 { color: #777; }
+        code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; }
+        pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
+        .severity-critical { color: #d32f2f; font-weight: bold; }
+        .severity-high { color: #f57c00; font-weight: bold; }
+        .severity-medium { color: #fbc02d; font-weight: bold; }
+        .severity-low { color: #388e3c; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Example Attack Chain</h1>
+    <p><strong>Severity:</strong> <span class="severity-"></span></p>
+    <p><strong>Impact:</strong> High</p>
+    <p><strong>Report Date:</strong> 2025-12-31</p>
+    <hr>
+    <div id="content">
+        # Example Attack Chain<br><br>**Severity:**   <br><br>**Impact:** High  <br><br>**Discovered:** 2025-12-31  <br><br><br>## Description<br><br>An example attack chain for testing multi-format export<br><br><br>## Attack Chain Steps<br><br>### Step 1: Cross-Site Scripting<br><br>**Description:** XSS in user profile bio field<br><br>**Endpoint:** `/profile`<br><br>**Payload:**<br>```<br><script>alert('XSS')</script><br>```<br><br>**Outcome:** XSS payload stored<br><br><br>### Step 2: Session Hijacking<br><br>**Description:** Admin views profile, XSS executes in admin context<br><br>**Endpoint:** `/admin/users`<br><br>**Prerequisites:**<br><br>- XSS payload stored<br><br>**Outcome:** Admin session token stolen<br><br><br>### Step 3: Privilege Escalation<br><br>**Description:** Use stolen admin session token to access admin panel<br><br>**Endpoint:** `/admin/dashboard`<br><br>**Prerequisites:**<br><br>- Admin session token stolen<br><br>**Outcome:** Full admin access<br><br><br>## Chain Visualization<br><br>```mermaid<br>graph TD<br>    Step1[1. Cross-Site Scripting]<br>    Step1 --> Step2<br>    Step2[2. Session Hijacking]<br>    Step2 --> Step3<br>    Step1 -.-> Step2<br>    Step3[3. Privilege Escalation]<br>    Step2 -.-> Step3<br>    Step3 --> Outcome[High Impact]<br>```<br>
+    </div>
+</body>
+</html>

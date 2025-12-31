@@ -1,0 +1,63 @@
+{
+  "number": 2,
+  "name": "Visualization & Export Features",
+  "start_date": "2026-01-14",
+  "end_date": "2026-01-28",
+  "goal": "Enhance framework with visualization, comparison, and multi-format export capabilities",
+  "capacity": 21,
+  "velocity": 21,
+  "stories": [
+    {
+      "id": "US-002",
+      "title": "Add Chain Comparison Tool",
+      "description": "Compare similar attack chains side-by-side to identify patterns and variations",
+      "story_points": 5,
+      "priority": "Medium",
+      "status": "Done",
+      "assignee": null,
+      "tasks": [
+        "Create chain comparison module",
+        "Implement side-by-side comparison",
+        "Highlight differences",
+        "Show common patterns",
+        "Add comparison tests"
+      ],
+      "epic": "Core Framework Enhancement"
+    },
+    {
+      "id": "US-003",
+      "title": "Export to Multiple Formats",
+      "description": "Export chains to PDF, HTML, and Word formats for sharing findings",
+      "story_points": 8,
+      "priority": "Medium",
+      "status": "Done",
+      "assignee": null,
+      "tasks": [
+        "Implement PDF export",
+        "Implement HTML export",
+        "Implement Word/DOCX export",
+        "Preserve formatting and diagrams",
+        "Add export tests"
+      ],
+      "epic": "Visualization & Reporting"
+    },
+    {
+      "id": "US-007",
+      "title": "Interactive Chain Diagram",
+      "description": "Create interactive chain diagrams with expand/collapse and hover details",
+      "story_points": 8,
+      "priority": "Medium",
+      "status": "Done",
+      "assignee": null,
+      "tasks": [
+        "Create interactive diagram viewer",
+        "Implement expand/collapse",
+        "Add hover details",
+        "Export as image",
+        "Web-based viewer"
+      ],
+      "epic": "Visualization & Reporting"
+    }
+  ]
+}
+
