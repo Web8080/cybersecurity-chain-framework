@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Decompiled code and APK files
+**/decompiled/
+**/extracted/
+**/*.apk
+**/*.xapk
+**/irobot_extract/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+
+# Mobile app analysis work (large files)
+targets/robotics/mobile_analysis_work/decompiled/
+targets/robotics/mobile_analysis_work/extracted/
+
+# Personal notes and work files
+notes/
+personal/
+*.md.bak
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Environment variables
+.env
+.env.local
+
+# OS files
+Thumbs.db
+.DS_Store

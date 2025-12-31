@@ -1,0 +1,15 @@
+# Attack Chain Analysis Tools Requirements
+
+# Core dependencies
+# (Currently using only standard library, but may add in future)
+
+# Optional: For enhanced visualization
+# graphviz>=0.20
+# matplotlib>=3.7.0
+# networkx>=3.1
+
+# Optional: For export formats
+# pandas>=2.0.0  # For CSV exports
+# openpyxl>=3.1.0  # For Excel exports
+
+

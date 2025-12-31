@@ -1,0 +1,69 @@
+{
+  "title": "DJI GO 4 - Firebase Database to Drone Control",
+  "description": "Chained vulnerabilities discovered via mobile app reverse engineering",
+  "steps": [
+    {
+      "step_number": 1,
+      "vulnerability_type": "Other",
+      "description": "Reverse engineered DJI GO 4 mobile app to discover Firebase database URL",
+      "endpoint": "Mobile app analysis: apktool + jadx",
+      "payload": "Extracted: https://djigo4-f53cb.firebaseio.com",
+      "prerequisites": [],
+      "outcome": "Firebase database endpoint discovered",
+      "evidence": null
+    },
+    {
+      "step_number": 2,
+      "vulnerability_type": "Other",
+      "description": "Test Firebase database for unauthenticated access",
+      "endpoint": "https://djigo4-f53cb.firebaseio.com/.json",
+      "payload": null,
+      "prerequisites": [
+        "Firebase database endpoint discovered"
+      ],
+      "outcome": "Firebase database access status determined",
+      "evidence": null
+    },
+    {
+      "step_number": 3,
+      "vulnerability_type": "Other",
+      "description": "Extract drone information, user data, or flight records from Firebase",
+      "endpoint": "https://djigo4-f53cb.firebaseio.com/",
+      "payload": null,
+      "prerequisites": [
+        "Firebase database access status determined"
+      ],
+      "outcome": "Sensitive drone/user data accessed",
+      "evidence": null
+    },
+    {
+      "step_number": 4,
+      "vulnerability_type": "Other",
+      "description": "Discover flight control API endpoints from app code (auto takeoff, landing, return home)",
+      "endpoint": "Java code analysis",
+      "payload": null,
+      "prerequisites": [
+        "Sensitive drone/user data accessed"
+      ],
+      "outcome": "Flight control API endpoints identified",
+      "evidence": null
+    }
+  ],
+  "impact": "High",
+  "severity": "High",
+  "prerequisites": [
+    "DJI GO 4 mobile app",
+    "Access to decompiled app code"
+  ],
+  "context": "DJI GO 4 drone control application",
+  "discovered_by": null,
+  "discovered_at": "2025-12-30T23:45:31.464459",
+  "validated": false,
+  "tags": [
+    "api",
+    "drone",
+    "dji",
+    "mobile-app",
+    "firebase"
+  ]
+}

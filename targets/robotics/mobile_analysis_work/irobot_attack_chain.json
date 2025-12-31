@@ -1,0 +1,81 @@
+{
+  "title": "iRobot Home - Cloud API to Robot Control",
+  "description": "Chained vulnerabilities discovered via mobile app reverse engineering",
+  "steps": [
+    {
+      "step_number": 1,
+      "vulnerability_type": "Other",
+      "description": "Reverse engineered iRobot Home app to discover cloud API endpoints",
+      "endpoint": "Mobile app analysis: apktool + jadx",
+      "payload": "Discovered: App/Cloud-api references, status.irobot.com",
+      "prerequisites": [],
+      "outcome": "Cloud API endpoints and status endpoint discovered",
+      "evidence": null
+    },
+    {
+      "step_number": 2,
+      "vulnerability_type": "Other",
+      "description": "Test status endpoint for information disclosure",
+      "endpoint": "https://status.irobot.com",
+      "payload": null,
+      "prerequisites": [
+        "Cloud API endpoints and status endpoint discovered"
+      ],
+      "outcome": "Status endpoint information gathered",
+      "evidence": null
+    },
+    {
+      "step_number": 3,
+      "vulnerability_type": "Other",
+      "description": "Discover cloud API base URL and endpoints from Java code",
+      "endpoint": "Java code analysis",
+      "payload": null,
+      "prerequisites": [
+        "Status endpoint information gathered"
+      ],
+      "outcome": "Cloud API base URL and endpoints identified",
+      "evidence": null
+    },
+    {
+      "step_number": 4,
+      "vulnerability_type": "Authentication Bypass",
+      "description": "Test cloud API for authentication bypass or weak authentication",
+      "endpoint": "Cloud API endpoints",
+      "payload": null,
+      "prerequisites": [
+        "Cloud API base URL and endpoints identified"
+      ],
+      "outcome": "Unauthorized access to robot control API achieved",
+      "evidence": null
+    },
+    {
+      "step_number": 5,
+      "vulnerability_type": "Business Logic Flaw",
+      "description": "Execute unauthorized robot commands (start, stop, schedule)",
+      "endpoint": "Robot control API",
+      "payload": null,
+      "prerequisites": [
+        "Unauthorized access to robot control API achieved"
+      ],
+      "outcome": "Unauthorized robot control achieved",
+      "evidence": null
+    }
+  ],
+  "impact": "High",
+  "severity": "High",
+  "prerequisites": [
+    "iRobot Home mobile app",
+    "Access to decompiled app code"
+  ],
+  "context": "iRobot Home robot vacuum control application",
+  "discovered_by": null,
+  "discovered_at": "2025-12-30T23:45:31.465484",
+  "validated": false,
+  "tags": [
+    "iot",
+    "cloud-api",
+    "roomba",
+    "irobot",
+    "mobile-app"
+  ]
+}

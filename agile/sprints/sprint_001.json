@@ -1,0 +1,41 @@
+{
+  "number": 1,
+  "name": "Foundation & Core Features",
+  "start_date": "2025-12-30",
+  "end_date": "2026-01-13",
+  "goal": "Establish foundation and complete core attack chain analysis features",
+  "capacity": 21,
+  "velocity": null,
+  "stories": [
+    {
+      "id": "US-001",
+      "title": "Improve Chain Validation Logic",
+      "description": "Enhance validation with better error messages",
+      "story_points": 3,
+      "priority": "High",
+      "status": "In Progress",
+      "assignee": null,
+      "tasks": [
+        "Enhance validation",
+        "Add tests",
+        "Update docs"
+      ],
+      "epic": null
+    },
+    {
+      "id": "US-005",
+      "title": "Target-Specific Chain Templates",
+      "description": "Create templates for each target",
+      "story_points": 8,
+      "priority": "High",
+      "status": "To Do",
+      "assignee": null,
+      "tasks": [
+        "Juice Shop templates",
+        "DVWA templates",
+        "bWAPP templates"
+      ],
+      "epic": null
+    }
+  ]
+}

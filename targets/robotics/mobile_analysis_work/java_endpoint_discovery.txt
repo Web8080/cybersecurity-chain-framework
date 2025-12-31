@@ -1,0 +1,63 @@
+================================================================================
+API ENDPOINT DISCOVERY REPORT
+================================================================================
+
+📡 Base URLs:
+  - irobot://home/
+  - https://bit.ly/
+  - https://www.gigya.com
+
+🔌 API Endpoints:
+  - https://global.irobot.com
+  - https://webapi.irobot.com/legal/documents/Asia-Pacific/China/Legal-Documents/Privacy-Policy.aspx?sc_lang=zh-CN
+  - https://appcontent.irobot.cn
+  - https://www.irobot.com/services/content/
+  - https://play.google.com/store/apps/details?id=com.irobot.home&hl=
+  - https://play.google.com/store/apps/details?id=com.irobot.home.prime
+  - https://integrate-int-test.iot.irobotapi.com/account-linking/ifttt
+  - https://integrate-prod.iot.irobotapi.com/account-linking/ifttt
+  - https://integrate-prod-cn.iot.irobot.cn/account-linking/ifttt
+  - https://bit.ly/api/click
+  - https://connectapi.ifttt.com
+  - https://ifttt.com/access/api/
+  - https://firebaseremoteconfig.googleapis.com/v1/projects/%s/namespaces/%s:fetch
+  - https://firebaseremoteconfigrealtime.googleapis.com/v1/projects/%s/namespaces/%s:streamFetchInvalidations
+  - https://www.googleapis.com/auth/games.firstparty
+  - https://www.googleapis.com/auth/appstate
+  - https://www.googleapis.com/auth/datastoremobile
+  - https://www.googleapis.com/auth/drive.appdata
+  - https://www.googleapis.com/auth/drive.apps
+  - https://www.googleapis.com/auth/drive.file
+  - https://www.googleapis.com/auth/drive
+  - https://www.googleapis.com/auth/games
+  - https://www.googleapis.com/auth/games_lite
+  - https://www.googleapis.com/auth/userinfo.email
+  - https://www.googleapis.com/auth/userinfo.profile
+  - https://www.googleapis.com/auth/plus.login
+  - https://www.googleapis.com/auth/plus.me
+
+☁️  Service URLs:
+  - https://kinesisvideo.us-west-2.amazonaws.com
+
+📦 API Classes Found:
+  - sources/okhttp3/OkHttpClient.java
+  - sources/androidx/transition/ViewUtilsApi19.java
+  - sources/androidx/transition/ViewOverlayApi14.java
+  - sources/androidx/transition/ViewGroupOverlayApi14.java
+  - sources/androidx/transition/ViewUtilsApi23.java
+  - sources/androidx/transition/ViewOverlayApi18.java
+  - sources/androidx/transition/ViewGroupOverlayApi18.java
+  - sources/androidx/transition/ViewUtilsApi22.java
+  - sources/androidx/transition/ViewUtilsApi29.java
+  - sources/androidx/transition/ViewGroupUtilsApi14.java
+  - sources/androidx/transition/WindowIdApi14.java
+  - sources/androidx/transition/WindowIdApi18.java
+  - sources/androidx/transition/ViewUtilsApi21.java
+  - sources/androidx/tracing/TraceApi29Impl.java
+  - sources/androidx/tracing/TraceApi18Impl.java
+  - sources/androidx/collection/MapCollections.java
+  - sources/androidx/room/MultiInstanceInvalidationClient.java
+  - sources/androidx/activity/OnBackPressedDispatcher.java
+  - sources/androidx/activity/ComponentActivity.java
+  - sources/androidx/activity/Api26Impl.java
+  ... and 499 more
