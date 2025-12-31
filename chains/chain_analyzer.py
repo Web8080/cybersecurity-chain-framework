@@ -62,16 +62,16 @@ class ImpactLevel(Enum):
 
 @dataclass
 class ChainStep:
- """Represents a single step in an attack chain"""
- step_number: int
- vulnerability_type: VulnerabilityType
- description: str
- endpoint: Optional[str] = None
- payload: Optional[str] = None
- prerequisites: List[str] = field(default_factory=list)
+    """Represents a single step in an attack chain"""
+    step_number: int
+    vulnerability_type: VulnerabilityType
+    description: str
+    endpoint: Optional[str] = None
+    payload: Optional[str] = None
+    prerequisites: List[str] = field(default_factory=list)
     outcome: Optional[str] = None
     evidence: Optional[str] = None
-    
+
     def to_dict(self) -> Dict:
         """Convert to dictionary for serialization"""
         return {
