@@ -69,8 +69,8 @@ class ChainStep:
  endpoint: Optional[str] = None
  payload: Optional[str] = None
  prerequisites: List[str] = field(default_factory=list)
- outcome: Optional[str] = None
- evidence: Optional[str] = None
+    outcome: Optional[str] = None
+    evidence: Optional[str] = None
     
     def to_dict(self) -> Dict:
         """Convert to dictionary for serialization"""
