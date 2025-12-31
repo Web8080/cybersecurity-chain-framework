@@ -69,21 +69,21 @@ class ChainStep:
  endpoint: Optional[str] = None
  payload: Optional[str] = None
  prerequisites: List[str] = field(default_factory=list)
- outcome: Optional[str] = None
- evidence: Optional[str] = None
- 
- def to_dict(self) -> Dict:
- """Convert to dictionary for serialization"""
- return {
- "step_number": self.step_number,
- "vulnerability_type": self.vulnerability_type.value,
- "description": self.description,
- "endpoint": self.endpoint,
- "payload": self.payload,
- "prerequisites": self.prerequisites,
- "outcome": self.outcome,
- "evidence": self.evidence
- }
+    outcome: Optional[str] = None
+    evidence: Optional[str] = None
+    
+    def to_dict(self) -> Dict:
+        """Convert to dictionary for serialization"""
+        return {
+            "step_number": self.step_number,
+            "vulnerability_type": self.vulnerability_type.value,
+            "description": self.description,
+            "endpoint": self.endpoint,
+            "payload": self.payload,
+            "prerequisites": self.prerequisites,
+            "outcome": self.outcome,
+            "evidence": self.evidence
+        }
 
 @dataclass
 class AttackChain:
