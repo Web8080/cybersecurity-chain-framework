@@ -88,12 +88,12 @@ class ChainStep:
 @dataclass
 class AttackChain:
  """Represents a complete attack chain"""
- title: str
- description: str
- steps: List[ChainStep] = field(default_factory=list)
- impact: ImpactLevel = ImpactLevel.MEDIUM
- severity: str = ""
- prerequisites: List[str] = field(default_factory=list)
+    title: str
+    description: str
+    steps: List[ChainStep] = field(default_factory=list)
+    impact: ImpactLevel = ImpactLevel.MEDIUM
+    severity: str = ""
+    prerequisites: List[str] = field(default_factory=list)
  context: Optional[str] = None
  discovered_by: Optional[str] = None
  discovered_at: Optional[datetime] = None
