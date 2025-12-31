@@ -1,6 +1,6 @@
 # Online Robot Services for Security Testing
 
-## 🎯 Public Robot Services & APIs
+## Public Robot Services & APIs
 
 ### 1. Cloud Robot Platforms
 
@@ -61,7 +61,7 @@
 - **Type:** Internet-connected devices search
 - **Access:** Search for exposed robot controllers
 - **Testing:** Real-world exposed devices
-- **⚠️ WARNING:** Only test devices you own or have permission
+- ** WARNING:** Only test devices you own or have permission
 - **URL:** https://www.shodan.io/
 - **Search Terms:** "robot controller", "modbus", "ros master"
 
@@ -69,7 +69,7 @@
 - **Type:** Internet device search
 - **Access:** Search for exposed services
 - **Testing:** Real-world exposed devices
-- **⚠️ WARNING:** Only test devices you own or have permission
+- ** WARNING:** Only test devices you own or have permission
 - **URL:** https://search.censys.io/
 
 ### 5. Mobile Robot Apps (Reverse Engineering)
@@ -104,7 +104,7 @@
 - **URL:** https://github.com/OWASP/IoTGoat
 - **Note:** Not specifically robots, but similar architecture
 
-## 🎯 Recommended Approach
+## Recommended Approach
 
 ### Option 1: Set Up Local ROS Environment (Best for Learning)
 
@@ -138,9 +138,9 @@ jadx app.apk
 # 5. Test APIs with Burp Suite
 ```
 
-### Option 3: Search for Exposed Devices (⚠️ Legal Warning)
+### Option 3: Search for Exposed Devices ( Legal Warning)
 
-**⚠️ IMPORTANT:** Only test devices you own or have explicit written permission!
+** IMPORTANT:** Only test devices you own or have explicit written permission!
 
 ```bash
 # Using Shodan (requires account)
@@ -161,7 +161,7 @@ jadx app.apk
 - Test cloud robot APIs
 - Document security findings
 
-## 🔍 Finding Targets
+## Finding Targets
 
 ### Shodan Queries
 ```
@@ -183,7 +183,7 @@ Search for: "robot API" "public" "demo"
 Many open-source robot projects with APIs
 ```
 
-## 🛠️ Tools for Testing Online Services
+## Tools for Testing Online Services
 
 ### API Testing
 - **Burp Suite** - Web/API proxy
@@ -201,23 +201,23 @@ Many open-source robot projects with APIs
 - **tcpdump** - Packet capture
 - **nmap** - Network scanning
 
-## ⚠️ Legal & Ethical Considerations
+## Legal & Ethical Considerations
 
 ### DO:
-- ✅ Test services you own
-- ✅ Use free tiers of cloud platforms
-- ✅ Reverse engineer apps you own
-- ✅ Test with explicit permission
-- ✅ Follow responsible disclosure
+- Test services you own
+- Use free tiers of cloud platforms
+- Reverse engineer apps you own
+- Test with explicit permission
+- Follow responsible disclosure
 
 ### DON'T:
-- ❌ Test systems without permission
-- ❌ Access unauthorized systems
-- ❌ Cause damage or disruption
-- ❌ Violate terms of service
-- ❌ Test production systems without authorization
+- Test systems without permission
+- Access unauthorized systems
+- Cause damage or disruption
+- Violate terms of service
+- Test production systems without authorization
 
-## 📋 Practical Steps
+## Practical Steps
 
 ### Step 1: Choose Your Approach
 1. **Local ROS Setup** - Best for learning
@@ -242,7 +242,7 @@ python3 targets/robotics/discover_chains.py
 # Build attack chains
 ```
 
-## 🎯 Quick Start: Mobile App Reverse Engineering
+## Quick Start: Mobile App Reverse Engineering
 
 This is the most accessible option:
 
@@ -258,5 +258,4 @@ This is the most accessible option:
 - **Censys:** https://search.censys.io/
 - **ROS Installation:** http://wiki.ros.org/Installation
 - **Mobile App Analysis:** https://github.com/skylot/jadx
-
 

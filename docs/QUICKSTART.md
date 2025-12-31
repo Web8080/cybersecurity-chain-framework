@@ -12,26 +12,26 @@ analyzer = ChainAnalyzer()
 
 # Create a new chain
 chain = analyzer.create_chain(
-    title="My Attack Chain",
-    description="Description of the attack",
-    impact=ImpactLevel.HIGH
+ title="My Attack Chain",
+ description="Description of the attack",
+ impact=ImpactLevel.HIGH
 )
 
 # Add steps
 step1 = ChainStep(
-    step_number=1,
-    vulnerability_type=VulnerabilityType.XSS,
-    description="XSS vulnerability in user input",
-    endpoint="/api/user/profile",
-    outcome="XSS payload stored"
+ step_number=1,
+ vulnerability_type=VulnerabilityType.XSS,
+ description="XSS vulnerability in user input",
+ endpoint="/api/user/profile",
+ outcome="XSS payload stored"
 )
 
 step2 = ChainStep(
-    step_number=2,
-    vulnerability_type=VulnerabilityType.SESSION_HIJACKING,
-    description="Session stolen via XSS",
-    prerequisites=["XSS payload stored"],  # Must match step1.outcome
-    outcome="Session credentials obtained"
+ step_number=2,
+ vulnerability_type=VulnerabilityType.SESSION_HIJACKING,
+ description="Session stolen via XSS",
+ prerequisites=["XSS payload stored"], # Must match step1.outcome
+ outcome="Session credentials obtained"
 )
 
 chain.add_step(step1)
@@ -130,5 +130,4 @@ print(analyzer.generate_report())
 - Review `chain_templates/` for example patterns
 - Use `chain_documentation.md` template for formal documentation
 - Explore `visualizer.py` for advanced visualization options
-
 

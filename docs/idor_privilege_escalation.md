@@ -98,19 +98,19 @@ Using gathered information, attacker identifies admin accounts or privileged end
 ## Mitigation
 
 1. **Authorization Checks**
-   - Verify user has permission for every resource access
-   - Use indirect object references (mapping)
-   - Implement role-based access control (RBAC)
+ - Verify user has permission for every resource access
+ - Use indirect object references (mapping)
+ - Implement role-based access control (RBAC)
 
 2. **Object References**
-   - Use unpredictable identifiers (UUIDs)
-   - Implement access control lists (ACLs)
-   - Log and monitor access attempts
+ - Use unpredictable identifiers (UUIDs)
+ - Implement access control lists (ACLs)
+ - Log and monitor access attempts
 
 3. **Information Disclosure**
-   - Minimize data in API responses
-   - Sanitize error messages
-   - Don't expose internal IDs or structure
+ - Minimize data in API responses
+ - Sanitize error messages
+ - Don't expose internal IDs or structure
 
 ---
 
@@ -119,5 +119,4 @@ Using gathered information, attacker identifies admin accounts or privileged end
 - Common in REST APIs
 - Frequently found in admin panels
 - Often combined with other vulnerabilities
-
 

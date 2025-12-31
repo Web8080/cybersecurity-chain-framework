@@ -1,16 +1,16 @@
-# 🎯 Critical Security Findings
+# Critical Security Findings
 
-## ⚠️ High-Value Discoveries
+## High-Value Discoveries
 
 ### iRobot Home - Critical Endpoints Found
 
-#### 1. Firebase Database ⚠️
+#### 1. Firebase Database 
 - **URL:** `https://irobot-home-ee297.firebaseio.com`
 - **Type:** Firebase Realtime Database
 - **Risk:** Potential unauthenticated access
 - **Location:** `resources/res/values/strings.xml`
 
-#### 2. IoT API Gateway Endpoints ⚠️
+#### 2. IoT API Gateway Endpoints 
 - **Discovery API:** `https://disc-int-test.iot.irobotapi.com/v1/robot/discover`
 - **Unauthenticated Base:** `https://unauth*.int-test.iot.irobotapi.com`
 - **Authenticated Base:** `https://*.execute-api.us-east-1.amazonaws.com/dev`
@@ -24,7 +24,7 @@
 
 ### DJI GO 4 - Critical Endpoints Found
 
-#### 1. Firebase Database ⚠️
+#### 1. Firebase Database 
 - **URL:** `https://djigo4-f53cb.firebaseio.com`
 - **Type:** Firebase Realtime Database
 - **Risk:** Potential unauthenticated access
@@ -33,7 +33,7 @@
 - **Content Service:** `https://content.djiservice.org/`
 - **Risk:** Service exposure
 
-## 🧪 Immediate Testing Recommendations
+## Immediate Testing Recommendations
 
 ### iRobot Firebase
 ```bash
@@ -66,7 +66,7 @@ curl https://djigo4-f53cb.firebaseio.com/drones.json
 curl https://djigo4-f53cb.firebaseio.com/users.json
 ```
 
-## 🎯 Attack Chain Opportunities
+## Attack Chain Opportunities
 
 ### iRobot Chain
 1. **Firebase Access** → Extract robot/user data
@@ -80,7 +80,7 @@ curl https://djigo4-f53cb.firebaseio.com/users.json
 3. **Authentication Bypass** → Unauthorized access
 4. **Drone Control** → Execute flight commands
 
-## 📊 Summary
+## Summary
 
 **Total Critical Endpoints:** 10+
 - Firebase databases: 2
@@ -91,7 +91,7 @@ curl https://djigo4-f53cb.firebaseio.com/users.json
 - DJI GO 4: 4-step chain
 - iRobot Home: 5-step chain
 
-## ⚠️ Security Implications
+## Security Implications
 
 ### High Risk Areas
 1. **Firebase Databases** - Potential data exposure
@@ -100,12 +100,12 @@ curl https://djigo4-f53cb.firebaseio.com/users.json
 4. **Authentication** - Need to verify security
 
 ### Testing Priority
-1. ✅ **Firebase security** - Check access rules
-2. ✅ **API authentication** - Test bypasses
-3. ✅ **Endpoint enumeration** - Discover all endpoints
-4. ✅ **Data extraction** - Test for sensitive data
+1. **Firebase security** - Check access rules
+2. **API authentication** - Test bypasses
+3. **Endpoint enumeration** - Discover all endpoints
+4. **Data extraction** - Test for sensitive data
 
-## 📝 Next Actions
+## Next Actions
 
 1. **Test Firebase databases** (both apps)
 2. **Test API Gateway endpoints** (iRobot)
@@ -113,8 +113,7 @@ curl https://djigo4-f53cb.firebaseio.com/users.json
 4. **Test with Burp Suite** for live traffic
 5. **Document all findings** in attack chains
 
-## 🚀 Ready for Testing!
+## Ready for Testing!
 
 All endpoints identified. Attack chains created. Ready to test!
-
 

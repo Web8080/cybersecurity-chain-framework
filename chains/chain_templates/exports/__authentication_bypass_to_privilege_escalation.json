@@ -1,0 +1,56 @@
+{
+ "title": "Juice Shop - Authentication Bypass to Privilege Escalation",
+ "description": "Authentication bypass vulnerability allows unauthorized access and privilege escalation",
+ "steps": [
+ {
+ "step_number": 1,
+ "vulnerability_type": "Authentication Bypass",
+ "description": "Manipulate JWT token to bypass authentication",
+ "endpoint": "/rest/user/login",
+ "payload": "Modified JWT token with 'role': 'admin'",
+ "prerequisites": [],
+ "outcome": "Authentication bypassed",
+ "evidence": null
+ },
+ {
+ "step_number": 2,
+ "vulnerability_type": "Privilege Escalation",
+ "description": "Access admin endpoints with manipulated token",
+ "endpoint": "/rest/admin/application-configuration",
+ "payload": "Authorization: Bearer <manipulated_token>",
+ "prerequisites": [
+ "Authentication bypassed"
+ ],
+ "outcome": "Unauthorized admin access",
+ "evidence": null
+ },
+ {
+ "step_number": 3,
+ "vulnerability_type": "Business Logic Flaw",
+ "description": "Modify application configuration or user data",
+ "endpoint": "/rest/admin/*",
+ "payload": null,
+ "prerequisites": [
+ "Unauthorized admin access"
+ ],
+ "outcome": "System configuration compromised",
+ "evidence": null
+ }
+ ],
+ "impact": "Critical",
+ "severity": "Critical",
+ "prerequisites": [
+ "Knowledge of authentication mechanism",
+ "Access to login endpoint"
+ ],
+ "context": "OWASP Juice Shop e-commerce application",
+ "discovered_by": null,
+ "discovered_at": "2025-12-31T11:24:17.478092",
+ "validated": false,
+ "tags": [
+ "jwt",
+ "juice-shop",
+ "auth-bypass",
+ "privilege-escalation"
+ ]
+}

@@ -1,6 +1,6 @@
 # Targets Quick Reference
 
-## 🎯 Primary Focus: OWASP Juice Shop ⭐
+## Primary Focus: OWASP Juice Shop 
 
 **Recommended for Sprint 1** - Best for attack chain analysis
 
@@ -17,12 +17,12 @@ bash setup.sh
 ```
 
 ### Why Juice Shop?
-- ✅ 100+ vulnerabilities perfect for chaining
-- ✅ Modern, realistic e-commerce application
-- ✅ Built-in scoreboard for tracking progress
-- ✅ Great for multi-step attack chains
-- ✅ Business logic flaws
-- ✅ API security testing
+- 100+ vulnerabilities perfect for chaining
+- Modern, realistic e-commerce application
+- Built-in scoreboard for tracking progress
+- Great for multi-step attack chains
+- Business logic flaws
+- API security testing
 
 ---
 
@@ -30,7 +30,7 @@ bash setup.sh
 
 ### Web Applications
 
-#### 1. OWASP Juice Shop ⭐ RECOMMENDED
+#### 1. OWASP Juice Shop RECOMMENDED
 - **URL:** http://localhost:3000
 - **IP:** 127.0.0.1
 - **Port:** 3000
@@ -127,23 +127,23 @@ docker ps
 ## Recommended Workflow for Sprint 1
 
 1. **Start Juice Shop** (Primary target)
-   ```bash
-   cd targets/juice-shop
-   bash setup.sh
-   ```
+ ```bash
+ cd targets/juice-shop
+ bash setup.sh
+ ```
 
 2. **Access the target**
-   - Browser: http://localhost:3000
-   - Or: http://127.0.0.1:3000
+ - Browser: http://localhost:3000
+ - Or: http://127.0.0.1:3000
 
 3. **Start discovering**
-   ```bash
-   python3 targets/juice-shop/discover_chains.py
-   ```
+ ```bash
+ python3 targets/juice-shop/discover_chains.py
+ ```
 
 4. **Document findings**
-   - Use `chains/chain_analyzer.py`
-   - Follow Sprint 1 goals
+ - Use `chains/chain_analyzer.py`
+ - Follow Sprint 1 goals
 
 ---
 
@@ -152,5 +152,4 @@ docker ps
 - **Quick Start:** `targets/GETTING_STARTED.md`
 - **Full Guide:** `targets/COMPREHENSIVE_GUIDE.md`
 - **Target Manager:** `python3 targets/target_manager.py`
-
 

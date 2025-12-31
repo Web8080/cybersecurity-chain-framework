@@ -1,27 +1,23 @@
 # Juice Shop - XSS to Admin Account Takeover
 
-**Severity:** Critical  
+**Severity:** Critical 
 
-**Impact:** Critical  
+**Impact:** Critical 
 
-**Discovered:** 2025-12-30  
-
+**Discovered:** 2025-12-30 
 
 ## Description
 
 Stored XSS in product review leads to session hijacking and admin access
 
-
 ## Context
 
 OWASP Juice Shop e-commerce application
-
 
 ## Prerequisites
 
 - Valid user account
 - Ability to post product reviews
-
 
 ## Attack Chain Steps
 
@@ -38,7 +34,6 @@ OWASP Juice Shop e-commerce application
 
 **Outcome:** XSS payload stored in product review
 
-
 ### Step 2: Session Hijacking
 
 **Description:** Admin views product review, XSS executes in admin context, session token stolen
@@ -50,7 +45,6 @@ OWASP Juice Shop e-commerce application
 - XSS payload stored in product review
 
 **Outcome:** Admin session token obtained by attacker
-
 
 ### Step 3: Privilege Escalation
 
@@ -64,25 +58,23 @@ OWASP Juice Shop e-commerce application
 
 **Outcome:** Full admin access to Juice Shop
 
-
 ## Chain Visualization
 
 ```mermaid
 graph TD
-    Prerequisites[Prerequisites]
-    Prerequisites --> Prereq1[Valid user account]
-    Prereq1 --> Step1
-    Prerequisites --> Prereq2[Ability to post product reviews]
-    Step1[1. Cross-Site Scripting]
-    Step1 --> Step2
-    Step2[2. Session Hijacking]
-    Step2 --> Step3
-    Step1 -.-> Step2
-    Step3[3. Privilege Escalation]
-    Step2 -.-> Step3
-    Step3 --> Outcome[Critical Impact]
+ Prerequisites[Prerequisites]
+ Prerequisites --> Prereq1[Valid user account]
+ Prereq1 --> Step1
+ Prerequisites --> Prereq2[Ability to post product reviews]
+ Step1[1. Cross-Site Scripting]
+ Step1 --> Step2
+ Step2[2. Session Hijacking]
+ Step2 --> Step3
+ Step1 -.-> Step2
+ Step3[3. Privilege Escalation]
+ Step2 -.-> Step3
+ Step3 --> Outcome[Critical Impact]
 ```
-
 
 ## Tags
 

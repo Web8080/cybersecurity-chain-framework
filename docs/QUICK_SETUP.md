@@ -1,6 +1,6 @@
 # Quick Setup: All Three Approaches
 
-## 🚀 Setup All Three Methods
+## Setup All Three Methods
 
 ### Option 1: Run All Setups
 
@@ -19,7 +19,7 @@ bash setup_shodan.sh
 
 ### Option 2: Setup Individually
 
-#### 1️⃣ Mobile App Reverse Engineering
+#### 1⃣ Mobile App Reverse Engineering
 
 ```bash
 bash setup_mobile_analysis.sh
@@ -35,7 +35,7 @@ bash setup_mobile_analysis.sh
 - Get an APK file
 - Extract and analyze
 
-#### 2️⃣ Local ROS Setup
+#### 2⃣ Local ROS Setup
 
 ```bash
 bash setup_ros.sh
@@ -52,7 +52,7 @@ bash setup_ros.sh
 - Start ROS master
 - Test ROS security
 
-#### 3️⃣ Shodan/Censys Setup
+#### 3⃣ Shodan/Censys Setup
 
 ```bash
 bash setup_shodan.sh
@@ -68,7 +68,7 @@ bash setup_shodan.sh
 - Configure tools
 - Search responsibly!
 
-## 📋 Quick Start Checklist
+## Quick Start Checklist
 
 ### Mobile App Analysis
 - [ ] Run `setup_mobile_analysis.sh`
@@ -94,13 +94,13 @@ bash setup_shodan.sh
 - [ ] Search (with permission!)
 - [ ] Test (with permission!)
 
-## 🎯 Recommended Order
+## Recommended Order
 
 1. **Start with Mobile App Analysis** (Easiest, no setup needed)
 2. **Then ROS Setup** (Good for learning)
 3. **Finally Shodan/Censys** (Requires API keys)
 
-## 📚 Documentation
+## Documentation
 
 - **Mobile Analysis:** `mobile_analysis_guide.md`
 - **ROS Testing:** `ros_testing_guide.md`
@@ -110,5 +110,4 @@ bash setup_shodan.sh
 ## Need Help?
 
 Run the setup scripts and follow the guides. Each approach has detailed documentation.
-
 

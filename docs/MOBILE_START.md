@@ -1,12 +1,12 @@
-# 🚀 Mobile App Analysis - Quick Start
+# Mobile App Analysis - Quick Start
 
-## ✅ Tools Ready!
+## Tools Ready!
 
-- ✅ apktool - Installed
-- ✅ jadx - Installed
-- ✅ Java - Installed
+- apktool - Installed
+- jadx - Installed
+- Java - Installed
 
-## 🎯 Quick Start (3 Steps)
+## Quick Start (3 Steps)
 
 ### Step 1: Get an APK File
 
@@ -49,7 +49,7 @@ cat api_endpoints.txt
 curl -X GET <discovered-endpoint>
 ```
 
-## 📋 Complete Workflow
+## Complete Workflow
 
 1. **Get APK** → Download from APKPure
 2. **Analyze** → Run `mobile_app_workflow.sh`
@@ -57,7 +57,7 @@ curl -X GET <discovered-endpoint>
 4. **Test** → Use curl or Burp Suite
 5. **Document** → Use `chain_analyzer.py`
 
-## 🎯 Recommended First App
+## Recommended First App
 
 **iRobot Home (Roomba)**
 - Most popular robot app
@@ -65,13 +65,13 @@ curl -X GET <discovered-endpoint>
 - Good for learning
 - Download: https://apkpure.com/irobot-home/com.irobot.home
 
-## 📚 Guides Available
+## Guides Available
 
 - **Complete Guide:** `mobile_analysis_complete_guide.md`
 - **Finding Apps:** `find_robot_apps.md`
 - **Workflow Script:** `mobile_app_workflow.sh`
 
-## 🛠️ Ready to Start?
+## Ready to Start?
 
 ```bash
 # 1. Download an APK (or use one you have)
@@ -83,5 +83,4 @@ bash mobile_app_workflow.sh <your-apk-file>
 ```
 
 **That's it!** The workflow will do everything automatically.
-
 

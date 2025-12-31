@@ -1,6 +1,6 @@
 # Finding Robot Apps to Analyze
 
-## 🎯 Popular Robot Apps to Analyze
+## Popular Robot Apps to Analyze
 
 ### Robot Vacuum Apps
 - **iRobot Home** (Roomba) - Most popular
@@ -23,7 +23,7 @@
 - **ABB RobotStudio**
 - **Fanuc** (Industrial robots)
 
-## 📥 How to Get APK Files
+## How to Get APK Files
 
 ### Method 1: APK Download Sites (Easiest)
 
@@ -66,7 +66,7 @@ adb pull /data/app/com.irobot.home-*/base.apk irobot.apk
 3. Find robot app
 4. Download APK
 
-## 🎯 Recommended Starting Apps
+## Recommended Starting Apps
 
 ### For Beginners (Easy to Analyze)
 1. **Sphero App** - Simple robot control
@@ -83,23 +83,23 @@ adb pull /data/app/com.irobot.home-*/base.apk irobot.apk
 2. **Cloud Robot Services** - Advanced APIs
 3. **Multi-robot Platforms** - Complex architecture
 
-## 📋 Quick Start: Get iRobot App
+## Quick Start: Get iRobot App
 
 ```bash
 # 1. Go to APKPure
-#    https://apkpure.com/irobot-home/com.irobot.home
+# https://apkpure.com/irobot-home/com.irobot.home
 
 # 2. Download APK
 
 # 3. Save to your workspace
-#    mv ~/Downloads/irobot.apk /Users/user/Cybersecurity/targets/robotics/
+# mv ~/Downloads/irobot.apk /Users/user/Cybersecurity/targets/robotics/
 
 # 4. Analyze
-#    cd /Users/user/Cybersecurity/targets/robotics
-#    bash mobile_app_workflow.sh irobot.apk
+# cd /Users/user/Cybersecurity/targets/robotics
+# bash mobile_app_workflow.sh irobot.apk
 ```
 
-## 🔍 What to Look For
+## What to Look For
 
 ### API Endpoints
 - Base URLs: `https://api.irobot.com/`
@@ -117,14 +117,14 @@ adb pull /data/app/com.irobot.home-*/base.apk irobot.apk
 - Status endpoints
 - Configuration endpoints
 
-## ⚠️ Legal Note
+## Legal Note
 
-✅ **Legal:**
+ **Legal:**
 - Analyze apps you own
 - Security research
 - Educational purposes
 
-❌ **Illegal:**
+ **Illegal:**
 - Use findings to access unauthorized systems
 - Reverse engineer for malicious purposes
 
@@ -134,5 +134,4 @@ adb pull /data/app/com.irobot.home-*/base.apk irobot.apk
 2. Download APK file
 3. Run analysis workflow
 4. Document findings
-
 

@@ -15,7 +15,7 @@ This guide provides a complete overview of all available targets for practicing 
 
 ## Web Applications
 
-### 1. OWASP Juice Shop ⭐ RECOMMENDED
+### 1. OWASP Juice Shop RECOMMENDED
 
 **Why Start Here:**
 - Modern, realistic e-commerce application
@@ -122,7 +122,7 @@ bash setup.sh
 
 ## Hardware/IoT Targets
 
-### 1. IoTGoat ⭐ RECOMMENDED FOR HARDWARE
+### 1. IoTGoat RECOMMENDED FOR HARDWARE
 
 **Why:**
 - OWASP project
@@ -180,20 +180,20 @@ bash setup.sh
 While real AI humanoid robots are expensive and typically not available for public pentesting, you can:
 
 1. **Research Known Vulnerabilities**
-   - CVE databases for robotics platforms
-   - Security research papers
-   - Manufacturer security advisories
+ - CVE databases for robotics platforms
+ - Security research papers
+ - Manufacturer security advisories
 
 2. **Analyze Robot Software/Firmware**
-   - Robot Operating System (ROS) security
-   - Robot control APIs
-   - Cloud-based robot services
-   - Mobile app security
+ - Robot Operating System (ROS) security
+ - Robot control APIs
+ - Cloud-based robot services
+ - Mobile app security
 
 3. **Apply IoT Methodologies**
-   - Many robots use similar embedded systems
-   - Use IoTGoat approaches
-   - Firmware analysis techniques
+ - Many robots use similar embedded systems
+ - Use IoTGoat approaches
+ - Firmware analysis techniques
 
 **See:** `targets/robotics/README.md` for detailed methodology
 
@@ -206,46 +206,46 @@ While real AI humanoid robots are expensive and typically not available for publ
 ### Workflow
 
 1. **Choose a Target**
-   ```bash
-   # Check available targets
-   python3 targets/target_manager.py
-   ```
+ ```bash
+ # Check available targets
+ python3 targets/target_manager.py
+ ```
 
 2. **Start the Target**
-   ```bash
-   # Use setup script
-   bash targets/<target>/setup.sh
-   
-   # Or use target manager
-   python3 targets/target_manager.py --start <target>
-   ```
+ ```bash
+ # Use setup script
+ bash targets/<target>/setup.sh
+ 
+ # Or use target manager
+ python3 targets/target_manager.py --start <target>
+ ```
 
 3. **Discover Vulnerabilities**
-   - Automated tools (Burp Suite, OWASP ZAP)
-   - Manual testing
-   - Use discovery helpers (e.g., `juice-shop/discover_chains.py`)
+ - Automated tools (Burp Suite, OWASP ZAP)
+ - Manual testing
+ - Use discovery helpers (e.g., `juice-shop/discover_chains.py`)
 
 4. **Build Attack Chains**
-   ```python
-   from chains.chain_analyzer import *
-   
-   analyzer = ChainAnalyzer()
-   chain = analyzer.create_chain(...)
-   # Add steps...
-   ```
+ ```python
+ from chains.chain_analyzer import *
+ 
+ analyzer = ChainAnalyzer()
+ chain = analyzer.create_chain(...)
+ # Add steps...
+ ```
 
 5. **Document and Report**
-   ```python
-   # Validate
-   is_valid, issues = chain.validate_chain()
-   
-   # Export
-   analyzer.export_chain(chain, "finding.json")
-   
-   # Generate report
-   from chains.visualizer import generate_markdown_report
-   print(generate_markdown_report(chain))
-   ```
+ ```python
+ # Validate
+ is_valid, issues = chain.validate_chain()
+ 
+ # Export
+ analyzer.export_chain(chain, "finding.json")
+ 
+ # Generate report
+ from chains.visualizer import generate_markdown_report
+ print(generate_markdown_report(chain))
+ ```
 
 ---
 
@@ -253,14 +253,14 @@ While real AI humanoid robots are expensive and typically not available for publ
 
 ### For Beginners
 1. **Start with:** OWASP Juice Shop
-   - Modern, well-documented
-   - Built-in hints and scoreboard
-   - Great examples available
+ - Modern, well-documented
+ - Built-in hints and scoreboard
+ - Great examples available
 
 2. **Then try:** DVWA
-   - Adjustable difficulty
-   - Clear vulnerability categories
-   - Good for fundamentals
+ - Adjustable difficulty
+ - Clear vulnerability categories
+ - Good for fundamentals
 
 ### For Intermediate
 1. **bWAPP** - Comprehensive testing
@@ -285,9 +285,9 @@ from chains.chain_analyzer import *
 analyzer = ChainAnalyzer()
 
 chain = analyzer.create_chain(
-    title="Price Manipulation Chain",
-    description="Business logic flaws in Juice Shop",
-    impact=ImpactLevel.HIGH
+ title="Price Manipulation Chain",
+ description="Business logic flaws in Juice Shop",
+ impact=ImpactLevel.HIGH
 )
 
 # Add steps...
@@ -323,12 +323,11 @@ analyzer.export_chain(chain, "juice_shop_chain.json")
 
 ## Next Steps
 
-1. ✅ Choose a target
-2. ✅ Set it up using the setup script
-3. ✅ Start discovering vulnerabilities
-4. ✅ Build your first attack chain
-5. ✅ Document and share findings
+1. Choose a target
+2. Set it up using the setup script
+3. Start discovering vulnerabilities
+4. Build your first attack chain
+5. Document and share findings
 
-Happy hunting! 🎯
-
+Happy hunting! 
 

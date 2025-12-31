@@ -36,18 +36,18 @@ analyzer = ChainAnalyzer()
 
 # Create a chain
 chain = analyzer.create_chain(
-    title="My First Chain",
-    description="What I discovered",
-    impact=ImpactLevel.HIGH
+ title="My First Chain",
+ description="What I discovered",
+ impact=ImpactLevel.HIGH
 )
 
 # Add a step
 step1 = ChainStep(
-    step_number=1,
-    vulnerability_type=VulnerabilityType.XSS,
-    description="Found XSS in search field",
-    endpoint="/api/search",
-    outcome="XSS payload executed"
+ step_number=1,
+ vulnerability_type=VulnerabilityType.XSS,
+ description="Found XSS in search field",
+ endpoint="/api/search",
+ outcome="XSS payload executed"
 )
 
 chain.add_step(step1)
@@ -71,7 +71,7 @@ print(generate_markdown_report(chain))
 analyzer.export_chain(chain, "my_finding.json")
 ```
 
-## That's It! 🎉
+## That's It! 
 
 You've created your first attack chain. Now:
 
@@ -92,6 +92,5 @@ You've created your first attack chain. Now:
 - Getting Started: `targets/GETTING_STARTED.md`
 - Examples: `targets/juice-shop/example_chain.py`
 
-Happy hunting! 🎯
-
+Happy hunting! 
 

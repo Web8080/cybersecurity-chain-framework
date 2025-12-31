@@ -49,9 +49,9 @@ analyzer = ChainAnalyzer()
 
 # Create your chain
 chain = analyzer.create_chain(
-    title="My Discovered Chain",
-    description="What I found",
-    impact=ImpactLevel.HIGH
+ title="My Discovered Chain",
+ description="What I found",
+ impact=ImpactLevel.HIGH
 )
 
 # Add steps as you discover them
@@ -124,10 +124,10 @@ docker run -d --name bwapp -p 80:80 raesene/bwapp
 
 ## Next Steps
 
-1. ✅ Set up Juice Shop
-2. ✅ Run discovery helper
-3. ✅ Start finding vulnerabilities
-4. ✅ Build your first attack chain
-5. ✅ Document and share findings
+1. Set up Juice Shop
+2. Run discovery helper
+3. Start finding vulnerabilities
+4. Build your first attack chain
+5. Document and share findings
 
-Happy hunting! 🎯
+Happy hunting! 

@@ -13,8 +13,8 @@ The chain validation system ensures that attack chains are logically sound and p
 
 ### 2. Prerequisites
 - **Prerequisite Matching:** Each step's prerequisites must be met by:
-  - Outcomes from previous steps, OR
-  - Chain-level prerequisites
+ - Outcomes from previous steps, OR
+ - Chain-level prerequisites
 - **Fuzzy Matching:** Similar outcomes are detected and suggested
 
 ### 3. Outcomes
@@ -26,16 +26,16 @@ The chain validation system ensures that attack chains are logically sound and p
 
 ## Error Messages
 
-### ❌ Critical Issues (Chain Invalid)
+### Critical Issues (Chain Invalid)
 - **"Chain has no steps"** - Add at least one step
 - **"Step numbers are missing"** - Fix step numbering
 - **"Prerequisite 'X' is not met"** - Fix prerequisite matching
 
-### ⚠️ Warnings (Chain Valid but Issues Found)
+### Warnings (Chain Valid but Issues Found)
 - **"Prerequisite not found exactly, but similar outcomes exist"** - Consider using suggested outcome
 - **"Missing description"** - Add description to step
 
-### 💡 Suggestions (Helpful Hints)
+### Suggestions (Helpful Hints)
 - **"Consider using one of these outcomes"** - Use suggested outcome text
 - **"Add outcome field"** - Add outcome if step is prerequisite for later steps
 
@@ -45,24 +45,24 @@ The chain validation system ensures that attack chains are logically sound and p
 
 **Problem:**
 ```
-❌ Step 2: Prerequisite 'Session stolen' is not met
+ Step 2: Prerequisite 'Session stolen' is not met
 ```
 
 **Solution 1:** Match the exact outcome text
 ```python
 step1 = ChainStep(
-    step_number=1,
-    vulnerability_type=VulnerabilityType.XSS,
-    description="XSS in profile",
-    outcome="Session stolen"  # Match exactly
+ step_number=1,
+ vulnerability_type=VulnerabilityType.XSS,
+ description="XSS in profile",
+ outcome="Session stolen" # Match exactly
 )
 
 step2 = ChainStep(
-    step_number=2,
-    vulnerability_type=VulnerabilityType.IDOR,
-    description="IDOR access",
-    prerequisites=["Session stolen"],  # Now matches
-    outcome="Data accessed"
+ step_number=2,
+ vulnerability_type=VulnerabilityType.IDOR,
+ description="IDOR access",
+ prerequisites=["Session stolen"], # Now matches
+ outcome="Data accessed"
 )
 ```
 
@@ -71,11 +71,11 @@ step2 = ChainStep(
 chain.prerequisites = ["Session stolen"]
 
 step2 = ChainStep(
-    step_number=2,
-    vulnerability_type=VulnerabilityType.IDOR,
-    description="IDOR access",
-    prerequisites=["Session stolen"],  # Now available from chain
-    outcome="Data accessed"
+ step_number=2,
+ vulnerability_type=VulnerabilityType.IDOR,
+ description="IDOR access",
+ prerequisites=["Session stolen"], # Now available from chain
+ outcome="Data accessed"
 )
 ```
 
@@ -83,7 +83,7 @@ step2 = ChainStep(
 
 **Problem:**
 ```
-⚠️ Step 2: Prerequisite 'XSS stored' not found exactly, but similar outcomes exist: ['XSS payload stored in profile']
+ Step 2: Prerequisite 'XSS stored' not found exactly, but similar outcomes exist: ['XSS payload stored in profile']
 ```
 
 **Solution:** Use the suggested outcome text
@@ -99,13 +99,13 @@ step1.outcome = "XSS stored"
 
 **Problem:**
 ```
-❌ Step numbers are missing: [2]
+ Step numbers are missing: [2]
 ```
 
 **Solution:** Ensure sequential numbering
 ```python
 step1 = ChainStep(step_number=1, ...)
-step2 = ChainStep(step_number=2, ...)  # Don't skip to 3
+step2 = ChainStep(step_number=2, ...) # Don't skip to 3
 step3 = ChainStep(step_number=3, ...)
 ```
 
@@ -113,16 +113,16 @@ step3 = ChainStep(step_number=3, ...)
 
 **Problem:**
 ```
-💡 Step 1: Consider adding an 'outcome' field, as Step 2 may depend on it
+ Step 1: Consider adding an 'outcome' field, as Step 2 may depend on it
 ```
 
 **Solution:** Add outcome to step
 ```python
 step1 = ChainStep(
-    step_number=1,
-    vulnerability_type=VulnerabilityType.XSS,
-    description="XSS in profile",
-    outcome="XSS payload stored"  # Add this
+ step_number=1,
+ vulnerability_type=VulnerabilityType.XSS,
+ description="XSS in profile",
+ outcome="XSS payload stored" # Add this
 )
 ```
 
@@ -139,24 +139,24 @@ step1 = ChainStep(
 ### Valid Chain
 ```python
 chain = analyzer.create_chain(
-    title="Valid Chain",
-    description="A properly structured chain",
-    impact=ImpactLevel.HIGH
+ title="Valid Chain",
+ description="A properly structured chain",
+ impact=ImpactLevel.HIGH
 )
 
 step1 = ChainStep(
-    step_number=1,
-    vulnerability_type=VulnerabilityType.XSS,
-    description="XSS in profile",
-    outcome="XSS payload stored"
+ step_number=1,
+ vulnerability_type=VulnerabilityType.XSS,
+ description="XSS in profile",
+ outcome="XSS payload stored"
 )
 
 step2 = ChainStep(
-    step_number=2,
-    vulnerability_type=VulnerabilityType.IDOR,
-    description="IDOR access",
-    prerequisites=["XSS payload stored"],  # Matches step1.outcome
-    outcome="Data accessed"
+ step_number=2,
+ vulnerability_type=VulnerabilityType.IDOR,
+ description="IDOR access",
+ prerequisites=["XSS payload stored"], # Matches step1.outcome
+ outcome="Data accessed"
 )
 
 chain.add_step(step1)
@@ -173,8 +173,8 @@ step1 = ChainStep(1, VulnerabilityType.XSS, "XSS", outcome="XSS done")
 step2 = ChainStep(2, VulnerabilityType.IDOR, "IDOR", prerequisites=["XSS stored"])
 
 # After (Valid)
-step1 = ChainStep(1, VulnerabilityType.XSS, "XSS", outcome="XSS stored")  # Changed outcome
-step2 = ChainStep(2, VulnerabilityType.IDOR, "IDOR", prerequisites=["XSS stored"])  # Now matches
+step1 = ChainStep(1, VulnerabilityType.XSS, "XSS", outcome="XSS stored") # Changed outcome
+step2 = ChainStep(2, VulnerabilityType.IDOR, "IDOR", prerequisites=["XSS stored"]) # Now matches
 ```
 
 ## Testing
@@ -197,8 +197,7 @@ You can also validate manually:
 ```python
 is_valid, issues = chain.validate_chain()
 if not is_valid:
-    for issue in issues:
-        print(issue)
+ for issue in issues:
+ print(issue)
 ```
-
 

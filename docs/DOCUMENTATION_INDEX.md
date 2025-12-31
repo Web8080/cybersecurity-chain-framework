@@ -23,8 +23,8 @@ This document provides a comprehensive index of all documentation in the Cyberse
 - **chains/workflow.md** - Step-by-step methodology
 - **chains/chain_documentation.md** - Template for documenting chains
 - **chains/chain_templates/** - Common attack chain patterns
-  - `xss_to_account_takeover.md` - XSS chain example
-  - `idor_privilege_escalation.md` - IDOR chain example
+ - `xss_to_account_takeover.md` - XSS chain example
+ - `idor_privilege_escalation.md` - IDOR chain example
 
 ### Tools
 - **chains/chain_analyzer.py** - Main chain analysis tool
@@ -43,7 +43,7 @@ This document provides a comprehensive index of all documentation in the Cyberse
 
 ### Web Applications
 
-#### OWASP Juice Shop ⭐ RECOMMENDED
+#### OWASP Juice Shop RECOMMENDED
 - **targets/juice-shop/README.md** - Juice Shop documentation
 - **targets/juice-shop/setup.sh** - Quick setup script
 - **targets/juice-shop/discover_chains.py** - Discovery helper
@@ -63,7 +63,7 @@ This document provides a comprehensive index of all documentation in the Cyberse
 
 ### Hardware/IoT
 
-#### IoTGoat ⭐ RECOMMENDED FOR HARDWARE
+#### IoTGoat RECOMMENDED FOR HARDWARE
 - **targets/iotgoat/README.md** - IoTGoat documentation
 - **targets/iotgoat/setup.sh** - Setup guide
 - GitHub: https://github.com/OWASP/IoTGoat
@@ -107,9 +107,9 @@ from chains.chain_analyzer import *
 
 analyzer = ChainAnalyzer()
 chain = analyzer.create_chain(
-    title="My Chain",
-    description="Description",
-    impact=ImpactLevel.HIGH
+ title="My Chain",
+ description="Description",
+ impact=ImpactLevel.HIGH
 )
 # Add steps...
 ```
@@ -154,34 +154,34 @@ python3 targets/target_manager.py --start juice-shop
 
 ```
 Cybersecurity/
-├── README.md                    # Main overview
-├── DOCUMENTATION_INDEX.md       # This file
-├── framework.py                 # Core framework
-│
-├── chains/                      # Attack Chain Analysis
-│   ├── README.md
-│   ├── QUICKSTART.md
-│   ├── workflow.md
-│   ├── chain_analyzer.py       # Main tool
-│   ├── visualizer.py           # Visualization
-│   ├── chain_documentation.md  # Template
-│   └── chain_templates/        # Examples
-│
-├── targets/                     # Pentesting Targets
-│   ├── README.md
-│   ├── GETTING_STARTED.md
-│   ├── COMPREHENSIVE_GUIDE.md
-│   ├── target_manager.py
-│   │
-│   ├── juice-shop/             # ⭐ Recommended
-│   ├── dvwa/
-│   ├── bwapp/
-│   ├── webgoat/
-│   ├── iotgoat/                # Hardware/IoT
-│   └── robotics/               # Robotics research
-│
-├── automation/                  # Automated testing
-└── business-logic/              # Business logic review
+ README.md # Main overview
+ DOCUMENTATION_INDEX.md # This file
+ framework.py # Core framework
+
+ chains/ # Attack Chain Analysis
+ README.md
+ QUICKSTART.md
+ workflow.md
+ chain_analyzer.py # Main tool
+ visualizer.py # Visualization
+ chain_documentation.md # Template
+ chain_templates/ # Examples
+
+ targets/ # Pentesting Targets
+ README.md
+ GETTING_STARTED.md
+ COMPREHENSIVE_GUIDE.md
+ target_manager.py
+ 
+ juice-shop/ # Recommended
+ dvwa/
+ bwapp/
+ webgoat/
+ iotgoat/ # Hardware/IoT
+ robotics/ # Robotics research
+
+ automation/ # Automated testing
+ business-logic/ # Business logic review
 ```
 
 ---

@@ -15,25 +15,25 @@
  {
  "step_number": 2,
  "vulnerability_type": "Session Hijacking",
- "description": "Admin views product review, XSS executes in admin context, session token stolen",
- "endpoint": "/#/search?q=...",
- "payload": null,
+ "description": "XSS payload executes when admin views review, stealing session token",
+ "endpoint": "Admin panel / product reviews",
+ "payload": "Stolen JWT token from admin session",
  "prerequisites": [
  "XSS payload stored in product review"
  ],
- "outcome": "Admin session token obtained by attacker",
+ "outcome": "Admin session token obtained",
  "evidence": null
  },
  {
  "step_number": 3,
  "vulnerability_type": "Privilege Escalation",
- "description": "Use stolen admin session token to access admin panel",
+ "description": "Use stolen admin token to access admin panel",
  "endpoint": "/#/administration",
- "payload": null,
+ "payload": "Authorization: Bearer <stolen_token>",
  "prerequisites": [
- "Admin session token obtained by attacker"
+ "Admin session token obtained"
  ],
- "outcome": "Full admin access to Juice Shop",
+ "outcome": "Unauthorized admin access achieved",
  "evidence": null
  }
  ],
@@ -45,13 +45,13 @@
  ],
  "context": "OWASP Juice Shop e-commerce application",
  "discovered_by": null,
- "discovered_at": "2025-12-30T20:58:45.420171",
+ "discovered_at": "2025-12-31T11:24:17.478066",
  "validated": false,
  "tags": [
+ "web",
  "xss",
- "juice-shop",
- "session-hijacking",
  "privilege-escalation",
- "web"
+ "session-hijacking",
+ "juice-shop"
  ]
 }

@@ -14,8 +14,8 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 ## Epic 1: Core Framework Enhancement
 
 ### US-001: Improve Chain Validation Logic
-**As a** security researcher  
-**I want** better chain validation with detailed error messages  
+**As a** security researcher 
+**I want** better chain validation with detailed error messages 
 **So that** I can quickly fix chain logic issues
 
 **Acceptance Criteria:**
@@ -23,15 +23,15 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 - [ ] Suggests fixes for common issues
 - [ ] Validates prerequisites match outcomes
 
-**Story Points:** 3  
-**Priority:** High  
+**Story Points:** 3 
+**Priority:** High 
 **Status:** Backlog
 
 ---
 
 ### US-002: Add Chain Comparison Tool
-**As a** security researcher  
-**I want** to compare similar attack chains  
+**As a** security researcher 
+**I want** to compare similar attack chains 
 **So that** I can identify patterns and variations
 
 **Acceptance Criteria:**
@@ -39,15 +39,15 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 - [ ] Highlight differences
 - [ ] Show common patterns
 
-**Story Points:** 5  
-**Priority:** Medium  
+**Story Points:** 5 
+**Priority:** Medium 
 **Status:** Backlog
 
 ---
 
 ### US-003: Export to Multiple Formats
-**As a** security researcher  
-**I want** to export chains to PDF, HTML, and Word  
+**As a** security researcher 
+**I want** to export chains to PDF, HTML, and Word 
 **So that** I can share findings in different formats
 
 **Acceptance Criteria:**
@@ -56,8 +56,8 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 - [ ] Export to Word/DOCX
 - [ ] Preserve formatting and diagrams
 
-**Story Points:** 8  
-**Priority:** Medium  
+**Story Points:** 8 
+**Priority:** Medium 
 **Status:** Backlog
 
 ---
@@ -65,8 +65,8 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 ## Epic 2: Target Integration
 
 ### US-004: Automated Target Discovery
-**As a** pentester  
-**I want** automated vulnerability discovery for targets  
+**As a** pentester 
+**I want** automated vulnerability discovery for targets 
 **So that** I can find bugs faster
 
 **Acceptance Criteria:**
@@ -75,15 +75,15 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 - [ ] Generate initial vulnerability list
 - [ ] Suggest potential chains
 
-**Story Points:** 13  
-**Priority:** High  
+**Story Points:** 13 
+**Priority:** High 
 **Status:** Backlog
 
 ---
 
 ### US-005: Target-Specific Chain Templates
-**As a** pentester  
-**I want** pre-built chain templates for each target  
+**As a** pentester 
+**I want** pre-built chain templates for each target 
 **So that** I have starting points for analysis
 
 **Acceptance Criteria:**
@@ -93,15 +93,15 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 - [ ] Templates for IoTGoat
 - [ ] Templates for Robotics
 
-**Story Points:** 8  
-**Priority:** High  
+**Story Points:** 8 
+**Priority:** High 
 **Status:** Backlog
 
 ---
 
 ### US-006: Real-Time Target Status Dashboard
-**As a** pentester  
-**I want** a dashboard showing all target statuses  
+**As a** pentester 
+**I want** a dashboard showing all target statuses 
 **So that** I can quickly see what's available
 
 **Acceptance Criteria:**
@@ -110,8 +110,8 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 - [ ] Start/stop targets from UI
 - [ ] Show running chains
 
-**Story Points:** 13  
-**Priority:** Medium  
+**Story Points:** 13 
+**Priority:** Medium 
 **Status:** Backlog
 
 ---
@@ -119,8 +119,8 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 ## Epic 3: Visualization & Reporting
 
 ### US-007: Interactive Chain Diagram
-**As a** security researcher  
-**I want** interactive chain diagrams  
+**As a** security researcher 
+**I want** interactive chain diagrams 
 **So that** I can explore chains visually
 
 **Acceptance Criteria:**
@@ -129,15 +129,15 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 - [ ] Export as image
 - [ ] Web-based viewer
 
-**Story Points:** 8  
-**Priority:** Medium  
+**Story Points:** 8 
+**Priority:** Medium 
 **Status:** Backlog
 
 ---
 
 ### US-008: Automated Report Generation
-**As a** security researcher  
-**I want** automated report generation from chains  
+**As a** security researcher 
+**I want** automated report generation from chains 
 **So that** I can quickly create professional reports
 
 **Acceptance Criteria:**
@@ -146,8 +146,8 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 - [ ] Add visualizations
 - [ ] Customizable templates
 
-**Story Points:** 5  
-**Priority:** High  
+**Story Points:** 5 
+**Priority:** High 
 **Status:** Backlog
 
 ---
@@ -155,8 +155,8 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 ## Epic 4: Advanced Features
 
 ### US-009: Chain Dependency Analysis
-**As a** security researcher  
-**I want** to analyze dependencies between chains  
+**As a** security researcher 
+**I want** to analyze dependencies between chains 
 **So that** I understand relationships
 
 **Acceptance Criteria:**
@@ -165,15 +165,15 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 - [ ] Identify critical paths
 - [ ] Suggest optimizations
 
-**Story Points:** 8  
-**Priority:** Low  
+**Story Points:** 8 
+**Priority:** Low 
 **Status:** Backlog
 
 ---
 
 ### US-010: AI-Powered Chain Suggestions
-**As a** security researcher  
-**I want** AI suggestions for potential chains  
+**As a** security researcher 
+**I want** AI suggestions for potential chains 
 **So that** I can discover new attack vectors
 
 **Acceptance Criteria:**
@@ -182,8 +182,8 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 - [ ] Provide examples
 - [ ] Learn from existing chains
 
-**Story Points:** 13  
-**Priority:** Low  
+**Story Points:** 13 
+**Priority:** Low 
 **Status:** Backlog
 
 ---
@@ -191,8 +191,8 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 ## Epic 5: Documentation & Training
 
 ### US-011: Interactive Tutorial
-**As a** new user  
-**I want** an interactive tutorial  
+**As a** new user 
+**I want** an interactive tutorial 
 **So that** I can learn the framework quickly
 
 **Acceptance Criteria:**
@@ -201,15 +201,15 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 - [ ] Progress tracking
 - [ ] Completion certificate
 
-**Story Points:** 13  
-**Priority:** Medium  
+**Story Points:** 13 
+**Priority:** Medium 
 **Status:** Backlog
 
 ---
 
 ### US-012: Video Tutorials
-**As a** new user  
-**I want** video tutorials  
+**As a** new user 
+**I want** video tutorials 
 **So that** I can learn visually
 
 **Acceptance Criteria:**
@@ -218,8 +218,8 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 - [ ] Advanced features
 - [ ] Real-world examples
 
-**Story Points:** 8  
-**Priority:** Low  
+**Story Points:** 8 
+**Priority:** Low 
 **Status:** Backlog
 
 ---
@@ -227,8 +227,8 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 ## Epic 6: Integration & Automation
 
 ### US-013: CI/CD Integration
-**As a** developer  
-**I want** CI/CD integration  
+**As a** developer 
+**I want** CI/CD integration 
 **So that** chains are validated automatically
 
 **Acceptance Criteria:**
@@ -237,15 +237,15 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 - [ ] Validation on commit
 - [ ] Report generation
 
-**Story Points:** 5  
-**Priority:** Low  
+**Story Points:** 5 
+**Priority:** Low 
 **Status:** Backlog
 
 ---
 
 ### US-014: API for Chain Management
-**As a** developer  
-**I want** a REST API for chain management  
+**As a** developer 
+**I want** a REST API for chain management 
 **So that** I can integrate with other tools
 
 **Acceptance Criteria:**
@@ -254,24 +254,24 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 - [ ] Authentication
 - [ ] Documentation
 
-**Story Points:** 13  
-**Priority:** Low  
+**Story Points:** 13 
+**Priority:** Low 
 **Status:** Backlog
 
 ---
 
 ## Completed Items
 
-### ✅ US-000: Initial Framework Setup
-**Completed:** Sprint 0  
+### US-000: Initial Framework Setup
+**Completed:** Sprint 0 
 **Story Points:** 13
 
-### ✅ US-000: Target Setup Scripts
-**Completed:** Sprint 0  
+### US-000: Target Setup Scripts
+**Completed:** Sprint 0 
 **Story Points:** 8
 
-### ✅ US-000: Robotics Examples
-**Completed:** Sprint 0  
+### US-000: Robotics Examples
+**Completed:** Sprint 0 
 **Story Points:** 5
 
 ---
@@ -294,5 +294,4 @@ Complete list of features, improvements, and work items for the Cybersecurity At
 - Review backlog weekly
 - Break down large items (>8 points)
 - Update estimates based on velocity
-
 

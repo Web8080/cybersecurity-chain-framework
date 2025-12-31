@@ -1,8 +1,8 @@
 # Finding Robot Targets for Security Testing
 
-## 🎯 Quick Answer: Where to Find Robot Services
+## Quick Answer: Where to Find Robot Services
 
-### 1. **Mobile App Reverse Engineering** ⭐ EASIEST
+### 1. **Mobile App Reverse Engineering** EASIEST
 **Best for:** API discovery, authentication testing
 
 **Steps:**
@@ -17,12 +17,12 @@
 - `jadx` - Decompile Java
 - `Burp Suite` - API testing
 
-### 2. **Cloud Platform Free Tiers** ⭐ RECOMMENDED
+### 2. **Cloud Platform Free Tiers** RECOMMENDED
 **Best for:** Real cloud services, API security
 
 **Options:**
 - **AWS RoboMaker** - Free tier available
-- **Azure Robotics** - Free tier available  
+- **Azure Robotics** - Free tier available 
 - **Google Cloud Robotics** - Free tier available
 
 **Steps:**
@@ -31,7 +31,7 @@
 3. Test APIs
 4. Document security findings
 
-### 3. **Local ROS Setup** ⭐ BEST FOR LEARNING
+### 3. **Local ROS Setup** BEST FOR LEARNING
 **Best for:** ROS protocol security, local testing
 
 **Steps:**
@@ -47,10 +47,10 @@ roscore
 # Port 11311 will be open
 ```
 
-### 4. **Shodan/Censys Search** ⚠️ LEGAL WARNING
+### 4. **Shodan/Censys Search** LEGAL WARNING
 **Best for:** Finding exposed devices
 
-**⚠️ CRITICAL:** Only test devices you own or have written permission!
+** CRITICAL:** Only test devices you own or have written permission!
 
 **Shodan Queries:**
 - `"robot controller"`
@@ -59,7 +59,7 @@ roscore
 
 **Access:** https://www.shodan.io/ (requires account)
 
-## 📱 Practical Example: Mobile App Analysis
+## Practical Example: Mobile App Analysis
 
 ### Step-by-Step
 
@@ -84,7 +84,7 @@ grep -r "api" decompiled/
 python3 targets/robotics/discover_chains.py
 ```
 
-## ☁️ Practical Example: Cloud Platform
+## Practical Example: Cloud Platform
 
 ### AWS RoboMaker
 
@@ -101,7 +101,7 @@ python3 targets/robotics/discover_chains.py
 curl -X GET https://robomaker.us-east-1.amazonaws.com/...
 ```
 
-## 🔍 Search Strategies
+## Search Strategies
 
 ### GitHub Search
 ```
@@ -120,7 +120,7 @@ Search: "robot controller" "demo"
 - Many include demo/test endpoints
 - Check paper repositories
 
-## 🎯 Recommended Starting Point
+## Recommended Starting Point
 
 **For Beginners:**
 1. Start with **mobile app reverse engineering**
@@ -141,13 +141,13 @@ Search: "robot controller" "demo"
 3. Document cloud-specific vulnerabilities
 4. Build comprehensive attack chains
 
-## ⚠️ Legal Reminders
+## Legal Reminders
 
-- ✅ **Legal:** Reverse engineer apps you own
-- ✅ **Legal:** Test cloud services you create
-- ✅ **Legal:** Test with explicit permission
-- ❌ **Illegal:** Access systems without permission
-- ❌ **Illegal:** Test production systems without authorization
+- **Legal:** Reverse engineer apps you own
+- **Legal:** Test cloud services you create
+- **Legal:** Test with explicit permission
+- **Illegal:** Access systems without permission
+- **Illegal:** Test production systems without authorization
 
 ## Next Steps
 
@@ -163,5 +163,4 @@ Search: "robot controller" "demo"
 - **ROS Setup:** http://wiki.ros.org/Installation
 - **Cloud Platforms:** Check respective documentation
 - **Discovery Tool:** `python3 targets/robotics/discover_chains.py`
-
 

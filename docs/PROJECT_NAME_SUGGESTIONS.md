@@ -1,6 +1,6 @@
 # GitHub Project Name Suggestions
 
-## 🎯 Recommended Names
+## Recommended Names
 
 ### Top Pick
 **`attack-chain-analyzer`**
@@ -12,26 +12,26 @@
 ### Alternative Options
 
 1. **`security-chain-framework`**
-   - Emphasizes framework aspect
-   - Broader scope
+ - Emphasizes framework aspect
+ - Broader scope
 
 2. **`pentest-chain-analyzer`**
-   - Explicitly pentesting-focused
-   - Clear target audience
+ - Explicitly pentesting-focused
+ - Clear target audience
 
 3. **`chain-pentest-framework`**
-   - Combines chain + pentest
-   - Framework emphasis
+ - Combines chain + pentest
+ - Framework emphasis
 
 4. **`attack-chain-pentest`**
-   - Direct and action-oriented
-   - Good for GitHub search
+ - Direct and action-oriented
+ - Good for GitHub search
 
 5. **`human-driven-pentest`**
-   - Emphasizes the "humans find chains" philosophy
-   - Unique angle
+ - Emphasizes the "humans find chains" philosophy
+ - Unique angle
 
-## 📝 Description Suggestions
+## Description Suggestions
 
 ### Short (GitHub description)
 ```
@@ -48,7 +48,7 @@ Automation finds bugs, humans find chains, business logic requires context
 A security testing framework that combines automated vulnerability discovery with human-driven attack chain analysis. Built for pentesters and security researchers who want to systematically document and analyze complex multi-step attack scenarios that automated tools miss.
 ```
 
-## 🏷️ Topics/Tags for GitHub
+## Topics/Tags for GitHub
 - `security`
 - `pentesting`
 - `attack-chain`
@@ -60,14 +60,14 @@ A security testing framework that combines automated vulnerability discovery wit
 - `exploitation`
 - `vulnerability-scanner`
 
-## ✅ Final Recommendation
+## Final Recommendation
 
 **Name:** `attack-chain-analyzer`
 
 **Why:**
-- ✅ Clear and descriptive
-- ✅ Matches core functionality
-- ✅ Easy to remember
-- ✅ Good for GitHub search/discovery
-- ✅ Professional naming convention
+- Clear and descriptive
+- Matches core functionality
+- Easy to remember
+- Good for GitHub search/discovery
+- Professional naming convention
 

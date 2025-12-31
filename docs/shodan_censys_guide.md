@@ -1,8 +1,8 @@
 # Shodan/Censys Search Guide
 
-## 🎯 Goal: Find Exposed Robot Services
+## Goal: Find Exposed Robot Services
 
-### ⚠️ CRITICAL LEGAL WARNING
+### CRITICAL LEGAL WARNING
 
 **ONLY search for and test devices you own or have explicit written permission to test!**
 
@@ -15,19 +15,19 @@ Unauthorized access to computer systems is illegal and can result in criminal ch
 1. **Sign up:** https://account.shodan.io/register
 2. **Get API key:** https://account.shodan.io/
 3. **Configure:**
-   ```bash
-   shodan init YOUR_API_KEY
-   ```
+ ```bash
+ shodan init YOUR_API_KEY
+ ```
 
 ### Censys
 
 1. **Sign up:** https://search.censys.io/register
 2. **Get credentials:** https://search.censys.io/account/api
 3. **Configure:**
-   ```bash
-   export CENSYS_API_ID='your_id'
-   export CENSYS_API_SECRET='your_secret'
-   ```
+ ```bash
+ export CENSYS_API_ID='your_id'
+ export CENSYS_API_SECRET='your_secret'
+ ```
 
 ## Step 2: Search for Robot Services
 
@@ -66,7 +66,7 @@ results = h.search("services.service_name:ROS")
 
 # Iterate results
 for result in results:
-    print(result)
+ print(result)
 ```
 
 ## Step 3: Analyze Results
@@ -101,16 +101,16 @@ from chains.chain_analyzer import *
 analyzer = ChainAnalyzer()
 
 chain = analyzer.create_chain(
-    title="Exposed Robot Controller",
-    description="Found via Shodan search (with permission)",
-    impact=ImpactLevel.HIGH
+ title="Exposed Robot Controller",
+ description="Found via Shodan search (with permission)",
+ impact=ImpactLevel.HIGH
 )
 
 # Add steps based on discovered vulnerabilities
 # ...
 ```
 
-## 🔍 Example Search Script
+## Example Search Script
 
 ```python
 #!/usr/bin/env python3
@@ -120,22 +120,22 @@ import shodan
 api = shodan.Shodan('YOUR_API_KEY')
 
 try:
-    # Search for robot controllers
-    results = api.search('robot controller')
-    
-    print(f"Found {results['total']} results")
-    
-    for result in results['matches']:
-        print(f"IP: {result['ip_str']}")
-        print(f"Port: {result['port']}")
-        print(f"Banner: {result['data']}")
-        print("---")
-        
+ # Search for robot controllers
+ results = api.search('robot controller')
+ 
+ print(f"Found {results['total']} results")
+ 
+ for result in results['matches']:
+ print(f"IP: {result['ip_str']}")
+ print(f"Port: {result['port']}")
+ print(f"Banner: {result['data']}")
+ print("---")
+ 
 except shodan.APIError as e:
-    print(f"Error: {e}")
+ print(f"Error: {e}")
 ```
 
-## 📋 Search Queries Reference
+## Search Queries Reference
 
 ### Shodan
 - `"robot controller"` - Robot controllers
@@ -150,16 +150,16 @@ except shodan.APIError as e:
 - `services.port:502`
 - `services.port:11311`
 
-## ⚠️ Legal Reminders
+## Legal Reminders
 
-- ✅ **Legal:** Search for your own devices
-- ✅ **Legal:** Search with permission
-- ✅ **Legal:** Research and documentation
-- ❌ **Illegal:** Access without permission
-- ❌ **Illegal:** Test production systems
-- ❌ **Illegal:** Cause damage or disruption
+- **Legal:** Search for your own devices
+- **Legal:** Search with permission
+- **Legal:** Research and documentation
+- **Illegal:** Access without permission
+- **Illegal:** Test production systems
+- **Illegal:** Cause damage or disruption
 
-## 🛠️ Tools
+## Tools
 
 - **Shodan CLI** - Command-line interface
 - **Shodan Python** - Python library
@@ -175,5 +175,4 @@ except shodan.APIError as e:
 4. Search (responsibly!)
 5. Test (with permission only!)
 6. Document findings
-
 

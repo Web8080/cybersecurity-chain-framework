@@ -1,28 +1,28 @@
 # API Endpoint Testing Results
 
-## 🧪 Test Results Summary
+## Test Results Summary
 
-### ✅ SUCCESS: iRobot Discovery API
+### SUCCESS: iRobot Discovery API
 
 **Endpoint:** `https://disc-int-test.iot.irobotapi.com/v1/robot/discover?robot_id=TEST&country_code=US`
 
 **Response:**
 ```json
 {
-  "discoveryTTL": 84662,
-  "httpBase": "https://unauth1.int-test.iot.irobotapi.com",
-  "iotTopics": "$aws",
-  "irbtTopics": "v027-irbthbu",
-  "mqtt": "agrxftka9i3qm.iot.us-east-1.amazonaws.com",
-  "svcDeplId": "v027"
+ "discoveryTTL": 84662,
+ "httpBase": "https://unauth1.int-test.iot.irobotapi.com",
+ "iotTopics": "$aws",
+ "irbtTopics": "v027-irbthbu",
+ "mqtt": "agrxftka9i3qm.iot.us-east-1.amazonaws.com",
+ "svcDeplId": "v027"
 }
 ```
 
 **Critical Findings:**
-- ✅ **API is accessible** without authentication!
-- ✅ **MQTT endpoint discovered:** `agrxftka9i3qm.iot.us-east-1.amazonaws.com`
-- ✅ **Base URL provided:** `https://unauth1.int-test.iot.irobotapi.com`
-- ✅ **IoT Topics:** `$aws` and `v027-irbthbu`
+- **API is accessible** without authentication!
+- **MQTT endpoint discovered:** `agrxftka9i3qm.iot.us-east-1.amazonaws.com`
+- **Base URL provided:** `https://unauth1.int-test.iot.irobotapi.com`
+- **IoT Topics:** `$aws` and `v027-irbthbu`
 
 **Security Implications:**
 - Discovery API exposes infrastructure details
@@ -31,7 +31,7 @@
 
 ---
 
-### ⚠️ Unauthenticated Endpoints (403 Forbidden)
+### Unauthenticated Endpoints (403 Forbidden)
 
 **Endpoints Tested:**
 - `https://unauth1.int-test.iot.irobotapi.com` → **403 Forbidden**
@@ -45,26 +45,26 @@
 
 ---
 
-## 🔍 Java Code Analysis Results
+## Java Code Analysis Results
 
 ### Critical API Endpoints Found
 
 #### iRobot Production APIs
 1. **IFTTT Integration:**
-   - Int-test: `https://integrate-int-test.iot.irobotapi.com/account-linking/ifttt`
-   - Production: `https://integrate-prod.iot.irobotapi.com/account-linking/ifttt`
-   - China: `https://integrate-prod-cn.iot.irobot.cn/account-linking/ifttt`
+ - Int-test: `https://integrate-int-test.iot.irobotapi.com/account-linking/ifttt`
+ - Production: `https://integrate-prod.iot.irobotapi.com/account-linking/ifttt`
+ - China: `https://integrate-prod-cn.iot.irobot.cn/account-linking/ifttt`
 
 2. **Content Services:**
-   - Main: `https://www.irobot.com/services/content/`
-   - China: `https://appcontent.irobot.cn`
-   - Global: `https://global.irobot.com`
+ - Main: `https://www.irobot.com/services/content/`
+ - China: `https://appcontent.irobot.cn`
+ - Global: `https://global.irobot.com`
 
 3. **Web API:**
-   - `https://webapi.irobot.com/legal/documents/...`
+ - `https://webapi.irobot.com/legal/documents/...`
 
 4. **Axeda Integration:**
-   - Sandbox: `https://irobot-sandbox.axeda.com/services/v1/rest/Scripto/execute/`
+ - Sandbox: `https://irobot-sandbox.axeda.com/services/v1/rest/Scripto/execute/`
 
 #### Third-Party APIs
 - **IFTTT:** `https://connectapi.ifttt.com`
@@ -87,9 +87,9 @@
 
 ---
 
-## 🎯 Key Discoveries
+## Key Discoveries
 
-### 1. Discovery API Vulnerability ⚠️
+### 1. Discovery API Vulnerability 
 - **Endpoint:** Discovery API accessible without auth
 - **Exposes:** MQTT broker, base URLs, deployment info
 - **Risk:** Information disclosure, infrastructure mapping
@@ -111,40 +111,40 @@
 
 ---
 
-## 📋 Testing Recommendations
+## Testing Recommendations
 
 ### High Priority
 1. **Test MQTT Broker**
-   ```bash
-   # Test MQTT connection
-   # Use MQTT client to connect
-   # Test topic access
-   ```
+ ```bash
+ # Test MQTT connection
+ # Use MQTT client to connect
+ # Test topic access
+ ```
 
 2. **Test IFTTT Integration**
-   ```bash
-   curl "https://integrate-int-test.iot.irobotapi.com/account-linking/ifttt"
-   ```
+ ```bash
+ curl "https://integrate-int-test.iot.irobotapi.com/account-linking/ifttt"
+ ```
 
 3. **Test Content Services**
-   ```bash
-   curl "https://www.irobot.com/services/content/"
-   ```
+ ```bash
+ curl "https://www.irobot.com/services/content/"
+ ```
 
 ### Medium Priority
 4. **Test Axeda Sandbox**
-   ```bash
-   curl "https://irobot-sandbox.axeda.com/services/v1/rest/Scripto/execute/"
-   ```
+ ```bash
+ curl "https://irobot-sandbox.axeda.com/services/v1/rest/Scripto/execute/"
+ ```
 
 5. **Test Web API**
-   ```bash
-   curl "https://webapi.irobot.com/..."
-   ```
+ ```bash
+ curl "https://webapi.irobot.com/..."
+ ```
 
 ---
 
-## 🚨 Security Concerns
+## Security Concerns
 
 1. **Discovery API** - Exposes infrastructure without authentication
 2. **MQTT Broker** - Endpoint and topics exposed
@@ -153,13 +153,13 @@
 
 ---
 
-## 📝 Next Steps
+## Next Steps
 
-1. ✅ Test MQTT broker connection
-2. ✅ Test IFTTT integration endpoints
-3. ✅ Analyze authentication mechanisms
-4. ✅ Test for IDOR vulnerabilities
-5. ✅ Document new attack chains
+1. Test MQTT broker connection
+2. Test IFTTT integration endpoints
+3. Analyze authentication mechanisms
+4. Test for IDOR vulnerabilities
+5. Document new attack chains
 
 ---
 

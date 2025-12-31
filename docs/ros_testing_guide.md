@@ -1,6 +1,6 @@
 # ROS Security Testing Guide
 
-## 🎯 Goal: Test ROS Security Locally
+## Goal: Test ROS Security Locally
 
 ### Step 1: Install ROS
 
@@ -91,16 +91,16 @@ from chains.chain_analyzer import *
 analyzer = ChainAnalyzer()
 
 chain = analyzer.create_chain(
-    title="ROS Unauthenticated Topic Publishing",
-    description="ROS master allows unauthenticated topic publishing",
-    impact=ImpactLevel.HIGH
+ title="ROS Unauthenticated Topic Publishing",
+ description="ROS master allows unauthenticated topic publishing",
+ impact=ImpactLevel.HIGH
 )
 
 # Add steps...
 # See example_chains.py for ROS chain example
 ```
 
-## 🔍 ROS Security Testing Checklist
+## ROS Security Testing Checklist
 
 - [ ] ROS master running (port 11311)
 - [ ] Network scan confirms port open
@@ -110,7 +110,7 @@ chain = analyzer.create_chain(
 - [ ] Safety system bypass tested
 - [ ] Findings documented
 
-## 🛠️ ROS Tools
+## ROS Tools
 
 - **roscore** - Start ROS master
 - **rostopic** - Topic management
@@ -119,7 +119,7 @@ chain = analyzer.create_chain(
 - **rosbag** - Record/playback
 - **nmap** - Network scanning
 
-## 📋 Common ROS Security Issues
+## Common ROS Security Issues
 
 1. **No Authentication** - ROS 1 has no built-in auth
 2. **Unencrypted Communication** - Default ROS communication unencrypted
@@ -127,7 +127,7 @@ chain = analyzer.create_chain(
 4. **No Access Control** - No permission system
 5. **Network Exposure** - ROS master often exposed on network
 
-## 🎯 Testing Scenarios
+## Testing Scenarios
 
 ### Scenario 1: Local ROS Testing
 ```bash
@@ -156,11 +156,11 @@ export ROS_MASTER_URI=http://<target-ip>:11311
 rostopic list
 ```
 
-## ⚠️ Legal Note
+## Legal Note
 
-✅ **Legal:** Test your own ROS setup
-✅ **Legal:** Test with permission
-❌ **Illegal:** Access ROS masters without permission
+ **Legal:** Test your own ROS setup
+ **Legal:** Test with permission
+ **Illegal:** Access ROS masters without permission
 
 ## Next Steps
 
@@ -169,5 +169,4 @@ rostopic list
 3. Start ROS master
 4. Test security
 5. Document findings
-
 

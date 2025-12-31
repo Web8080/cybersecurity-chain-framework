@@ -1,6 +1,6 @@
 # Complete Mobile App Analysis Guide
 
-## 🎯 Goal: Find Robot APIs and Build Attack Chains
+## Goal: Find Robot APIs and Build Attack Chains
 
 ### Step 1: Get an APK File
 
@@ -58,7 +58,7 @@ curl -X GET https://api.robot-service.com/v1/status
 
 # Test with authentication
 curl -X GET https://api.robot-service.com/v1/robots \
-  -H "Authorization: Bearer TOKEN"
+ -H "Authorization: Bearer TOKEN"
 ```
 
 **Using Burp Suite:**
@@ -77,27 +77,27 @@ analyzer = ChainAnalyzer()
 
 # Create chain based on discovered vulnerabilities
 chain = analyzer.create_chain(
-    title="Robot API Authentication Bypass",
-    description="Discovered via mobile app reverse engineering",
-    impact=ImpactLevel.HIGH
+ title="Robot API Authentication Bypass",
+ description="Discovered via mobile app reverse engineering",
+ impact=ImpactLevel.HIGH
 )
 
 # Add steps
 step1 = ChainStep(
-    step_number=1,
-    vulnerability_type=VulnerabilityType.OTHER,
-    description="Reverse engineered mobile app to discover API endpoints",
-    endpoint="Mobile app analysis",
-    outcome="API endpoints and authentication mechanisms discovered"
+ step_number=1,
+ vulnerability_type=VulnerabilityType.OTHER,
+ description="Reverse engineered mobile app to discover API endpoints",
+ endpoint="Mobile app analysis",
+ outcome="API endpoints and authentication mechanisms discovered"
 )
 
 step2 = ChainStep(
-    step_number=2,
-    vulnerability_type=VulnerabilityType.AUTH_BYPASS,
-    description="JWT token validation bypass allows unauthorized access",
-    endpoint="https://api.robot-service.com/v1/robots",
-    prerequisites=["API endpoints and authentication mechanisms discovered"],
-    outcome="Unauthorized API access achieved"
+ step_number=2,
+ vulnerability_type=VulnerabilityType.AUTH_BYPASS,
+ description="JWT token validation bypass allows unauthorized access",
+ endpoint="https://api.robot-service.com/v1/robots",
+ prerequisites=["API endpoints and authentication mechanisms discovered"],
+ outcome="Unauthorized API access achieved"
 )
 
 chain.add_step(step1)
@@ -106,15 +106,15 @@ chain.add_step(step2)
 # Validate and export
 is_valid, issues = chain.validate_chain()
 if is_valid:
-    analyzer.export_chain(chain, "mobile_app_finding.json")
-    print("✅ Chain exported!")
+ analyzer.export_chain(chain, "mobile_app_finding.json")
+ print(" Chain exported!")
 else:
-    print("⚠️  Validation issues:")
-    for issue in issues:
-        print(f"  {issue}")
+ print(" Validation issues:")
+ for issue in issues:
+ print(f" {issue}")
 ```
 
-## 🔍 Analysis Checklist
+## Analysis Checklist
 
 ### Extraction
 - [ ] APK extracted with apktool
@@ -149,7 +149,7 @@ else:
 - [ ] Attack chains created
 - [ ] Reports generated
 
-## 🛠️ Tools Reference
+## Tools Reference
 
 ### apktool
 ```bash
@@ -181,7 +181,7 @@ grep -ri "api\|endpoint" decompiled/
 grep -ri "token\|auth\|bearer" decompiled/
 ```
 
-## 📋 Common Findings
+## Common Findings
 
 ### API Endpoints
 - Base URLs in config files
@@ -200,7 +200,7 @@ grep -ri "token\|auth\|bearer" decompiled/
 - Missing SSL pinning
 - Insecure storage
 
-## 🎯 Example Workflow
+## Example Workflow
 
 ```bash
 # 1. Get APK
@@ -224,16 +224,15 @@ python3
 
 ## Next Steps
 
-1. ✅ Get an APK file
-2. ✅ Run analysis workflow
-3. ✅ Review findings
-4. ✅ Test APIs
-5. ✅ Document with chain_analyzer.py
+1. Get an APK file
+2. Run analysis workflow
+3. Review findings
+4. Test APIs
+5. Document with chain_analyzer.py
 
 ## Need Help?
 
 - **Finding APKs:** See `find_robot_apps.md`
 - **Workflow:** Run `mobile_app_workflow.sh`
 - **Documentation:** Use `chain_analyzer.py`
-
 

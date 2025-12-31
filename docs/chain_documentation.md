@@ -141,4 +141,3 @@ Use this template to document discovered attack chains.
 
 [Additional notes, observations, or thoughts]
 
-

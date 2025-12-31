@@ -1,6 +1,6 @@
 # Mobile App Reverse Engineering Guide
 
-## 🎯 Goal: Find Robot APIs by Analyzing Mobile Apps
+## Goal: Find Robot APIs by Analyzing Mobile Apps
 
 ### Step 1: Get an APK File
 
@@ -100,7 +100,7 @@ curl -X GET https://api.robot-service.com/v1/status
 
 # Test with authentication
 curl -X GET https://api.robot-service.com/v1/status \
-  -H "Authorization: Bearer TOKEN"
+ -H "Authorization: Bearer TOKEN"
 ```
 
 ### Step 7: Document Findings
@@ -111,9 +111,9 @@ from chains.chain_analyzer import *
 analyzer = ChainAnalyzer()
 
 chain = analyzer.create_chain(
-    title="Robot API Authentication Bypass",
-    description="Discovered via mobile app reverse engineering",
-    impact=ImpactLevel.HIGH
+ title="Robot API Authentication Bypass",
+ description="Discovered via mobile app reverse engineering",
+ impact=ImpactLevel.HIGH
 )
 
 # Add steps based on discovered vulnerabilities
@@ -122,7 +122,7 @@ chain = analyzer.create_chain(
 analyzer.export_chain(chain, "mobile_app_finding.json")
 ```
 
-## 🔍 Example: Roomba App Analysis
+## Example: Roomba App Analysis
 
 ```bash
 # 1. Download Roomba app APK
@@ -140,7 +140,7 @@ grep -r "https://" . | grep -i api
 grep -r "token" . | grep -i auth
 ```
 
-## 🛠️ Tools
+## Tools
 
 - **apktool** - APK extraction
 - **jadx** - Java decompilation
@@ -148,7 +148,7 @@ grep -r "token" . | grep -i auth
 - **adb** - Android Debug Bridge
 - **grep** - Text search
 
-## 📋 Checklist
+## Checklist
 
 - [ ] APK file obtained
 - [ ] APK extracted with apktool
@@ -159,11 +159,11 @@ grep -r "token" . | grep -i auth
 - [ ] Vulnerabilities documented
 - [ ] Attack chains created
 
-## ⚠️ Legal Note
+## Legal Note
 
-✅ **Legal:** Reverse engineer apps you own or have permission
-✅ **Legal:** Analyze for security research
-❌ **Illegal:** Use findings to access unauthorized systems
+ **Legal:** Reverse engineer apps you own or have permission
+ **Legal:** Analyze for security research
+ **Illegal:** Use findings to access unauthorized systems
 
 ## Next Steps
 
@@ -173,5 +173,4 @@ grep -r "token" . | grep -i auth
 4. Find APIs
 5. Test with Burp Suite
 6. Document findings
-
 

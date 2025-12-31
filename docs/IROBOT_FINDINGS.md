@@ -1,12 +1,12 @@
 # iRobot Home - Security Analysis Findings
 
-## 📱 App Information
+## App Information
 - **App:** iRobot Home (Classic)
 - **Version:** 7.17.5
 - **Package:** com.irobot.home
 - **Analysis Date:** 2025-12-30
 
-## 🔍 Discovered Endpoints
+## Discovered Endpoints
 
 ### Status Endpoint
 - **URL:** `https://status.irobot.com`
@@ -22,28 +22,28 @@
 ### Support URLs
 - **Japanese Support:** `https://www.irobot-jp.com/support/`
 
-## 🔐 Authentication References Found
+## Authentication References Found
 
 ### Authentication Mechanisms
 - **Alexa Integration:**
-  - `alexa_auth_request_in_progress` - Auth request in progress
-  - `alexa_auth_token_copy_permissions` - Token copy permissions
-  - `alexa_error_retrieving_auth_token` - Auth token retrieval errors
+ - `alexa_auth_request_in_progress` - Auth request in progress
+ - `alexa_auth_token_copy_permissions` - Token copy permissions
+ - `alexa_error_retrieving_auth_token` - Auth token retrieval errors
 
 - **IFTTT Integration:**
-  - `ifttt_issue_invalid_user_token` - Invalid user token issues
-  - Token-based authentication
+ - `ifttt_issue_invalid_user_token` - Invalid user token issues
+ - Token-based authentication
 
 - **Password Authentication:**
-  - `bug_report_connection_state_asset_password_auth` - Password auth failures
-  - `PW-auth-fail` - Password authentication failures
+ - `bug_report_connection_state_asset_password_auth` - Password auth failures
+ - `PW-auth-fail` - Password authentication failures
 
 ### Third-Party Integrations
 - **Alexa** - Voice assistant integration
 - **IFTTT** - Automation platform
 - **Cloud Services** - App-to-cloud API
 
-## 📋 API Keywords Found
+## API Keywords Found
 
 ### Connection States
 - `bug_report_connection_state_app_to_cloud` - App/Cloud API connection
@@ -54,7 +54,7 @@
 - IFTTT API integration
 - Cloud API endpoints
 
-## 🎯 Potential Attack Vectors
+## Potential Attack Vectors
 
 ### 1. Status Endpoint
 - **Endpoint:** `https://status.irobot.com`
@@ -76,34 +76,33 @@
 - **Risk:** Weak passwords, brute force
 - **Test:** Password policy, rate limiting
 
-## 📝 Next Steps
+## Next Steps
 
 1. **Test Status Endpoint**
-   ```bash
-   curl https://status.irobot.com
-   ```
+ ```bash
+ curl https://status.irobot.com
+ ```
 
 2. **Analyze Java Code**
-   - Search for API client classes
-   - Find cloud API implementations
-   - Identify authentication flows
+ - Search for API client classes
+ - Find cloud API implementations
+ - Identify authentication flows
 
 3. **Test with Burp Suite**
-   - Intercept app traffic
-   - Analyze API calls
-   - Test authentication
+ - Intercept app traffic
+ - Analyze API calls
+ - Test authentication
 
 4. **Document Attack Chains**
-   - Use `chain_analyzer.py`
-   - Build chains from discovered vulnerabilities
-   - Document findings
+ - Use `chain_analyzer.py`
+ - Build chains from discovered vulnerabilities
+ - Document findings
 
-## 🔍 Further Analysis Needed
+## Further Analysis Needed
 
 - [ ] Search Java code for cloud API implementations
 - [ ] Find authentication token handling
 - [ ] Identify API base URLs
 - [ ] Test status endpoint
 - [ ] Analyze Alexa/IFTTT integrations
-
 

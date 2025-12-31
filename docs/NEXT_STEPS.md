@@ -1,35 +1,35 @@
-# 🎯 Next Steps - Action Plan
+# Next Steps - Action Plan
 
-## 📊 Current Status
-- **Sprint 1 Progress:** 3/21 points (14.3%) ✅
+## Current Status
+- **Sprint 1 Progress:** 3/21 points (14.3%) 
 - **Days Remaining:** ~12 days
 - **Velocity Needed:** ~1.5 points/day
 
 ---
 
-## 🚀 Immediate Next Steps (Priority Order)
+## Immediate Next Steps (Priority Order)
 
-### 1. **US-005: Target-Specific Chain Templates** (8 points) ⭐ HIGHEST PRIORITY
+### 1. **US-005: Target-Specific Chain Templates** (8 points) HIGHEST PRIORITY
 
 **Why:** Most impactful - provides starting points for all targets
 
 **Tasks:**
 - [ ] Create Juice Shop chain templates (2 points)
-  - XSS to Admin chain template
-  - SQL Injection chain template
-  - Authentication bypass chain template
+ - XSS to Admin chain template
+ - SQL Injection chain template
+ - Authentication bypass chain template
 - [ ] Create DVWA chain templates (2 points)
-  - Command injection chain
-  - File upload to RCE chain
+ - Command injection chain
+ - File upload to RCE chain
 - [ ] Create bWAPP chain templates (2 points)
-  - XSS to session hijacking
-  - SQL injection to data exfiltration
+ - XSS to session hijacking
+ - SQL injection to data exfiltration
 - [ ] Create IoTGoat templates (1 point)
-  - Firmware analysis chain
-  - Network exploitation chain
+ - Firmware analysis chain
+ - Network exploitation chain
 - [ ] Create Robotics templates (1 point)
-  - Mobile app to robot control (already have examples!)
-  - ROS network exploitation
+ - Mobile app to robot control (already have examples!)
+ - ROS network exploitation
 
 **Files to Create:**
 - `chains/chain_templates/juice_shop_templates.py`
@@ -42,20 +42,20 @@
 
 ---
 
-### 2. **US-008: Automated Report Generation** (5 points) ⭐ HIGH PRIORITY
+### 2. **US-008: Automated Report Generation** (5 points) HIGH PRIORITY
 
 **Why:** High value - enables professional reporting
 
 **Tasks:**
 - [ ] Design report template structure
-  - Executive summary
-  - Chain details
-  - Visualizations
-  - Recommendations
+ - Executive summary
+ - Chain details
+ - Visualizations
+ - Recommendations
 - [ ] Implement report generator
-  - Markdown format
-  - HTML format (optional)
-  - PDF export (optional)
+ - Markdown format
+ - HTML format (optional)
+ - PDF export (optional)
 - [ ] Add executive summary generation
 - [ ] Include Mermaid diagrams in reports
 - [ ] Test with existing chains
@@ -72,16 +72,16 @@
 
 **Tasks:**
 - [ ] Create `.gitignore`
-  - Python cache files
-  - Decompiled code
-  - APK files
-  - Personal notes
+ - Python cache files
+ - Decompiled code
+ - APK files
+ - Personal notes
 - [ ] Create `requirements.txt`
-  - List all Python dependencies
+ - List all Python dependencies
 - [ ] Add LICENSE file
-  - Choose license (MIT, Apache 2.0, etc.)
+ - Choose license (MIT, Apache 2.0, etc.)
 - [ ] Create `.github/workflows/` (optional)
-  - CI/CD for validation
+ - CI/CD for validation
 - [ ] Prepare initial commit message
 
 **Files to Create:**
@@ -117,11 +117,11 @@
 
 **Tasks:**
 - [ ] Test MQTT broker connection
-  - `agrxftka9i3qm.iot.us-east-1.amazonaws.com`
-  - Test topic access
+ - `agrxftka9i3qm.iot.us-east-1.amazonaws.com`
+ - Test topic access
 - [ ] Test Firebase databases
-  - `irobot-home-ee297.firebaseio.com`
-  - `djigo4-f53cb.firebaseio.com`
+ - `irobot-home-ee297.firebaseio.com`
+ - `djigo4-f53cb.firebaseio.com`
 - [ ] Test IFTTT integration endpoints
 - [ ] Create additional attack chains from findings
 - [ ] Document test results
@@ -130,7 +130,7 @@
 
 ---
 
-## 📅 Recommended Timeline
+## Recommended Timeline
 
 ### Week 1 (Days 1-5)
 1. **Day 1-2:** US-005 - Create target templates (Juice Shop, DVWA)
@@ -146,7 +146,7 @@
 
 ---
 
-## 🎯 Quick Wins (Can Do Anytime)
+## Quick Wins (Can Do Anytime)
 
 1. **Add `.gitignore`** - 5 minutes
 2. **Create `requirements.txt`** - 10 minutes
@@ -156,14 +156,14 @@
 
 ---
 
-## 📝 Decision Points
+## Decision Points
 
 ### What to Focus On?
 **Recommendation:** Focus on **US-005 (Templates)** first because:
-- ✅ Highest impact on framework usability
-- ✅ Builds on existing examples
-- ✅ Provides immediate value
-- ✅ Can be done incrementally
+- Highest impact on framework usability
+- Builds on existing examples
+- Provides immediate value
+- Can be done incrementally
 
 ### What Can Be Deferred?
 - **US-004 (ZAP Integration)** - Can be moved to Sprint 2
@@ -172,24 +172,24 @@
 
 ---
 
-## ✅ Success Criteria
+## Success Criteria
 
 **Sprint 1 Complete When:**
-- [x] US-001: Chain validation ✅ DONE
+- [x] US-001: Chain validation DONE
 - [ ] US-005: Target templates (at least 3/5 targets)
 - [ ] US-008: Basic report generation
 - [ ] GitHub ready (gitignore, requirements, license)
 - [ ] Documentation updated
 
 **Minimum Viable Sprint:**
-- US-001 ✅
+- US-001 
 - US-005 (3+ templates)
 - US-008 (basic reports)
 - GitHub ready
 
 ---
 
-## 🚀 Getting Started Right Now
+## Getting Started Right Now
 
 **Quick Start Command:**
 ```bash
@@ -207,6 +207,6 @@ mkdir -p chains/chain_templates
 
 ---
 
-**Last Updated:** December 31, 2025  
+**Last Updated:** December 31, 2025 
 **Next Review:** After completing US-005
 

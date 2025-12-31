@@ -1,14 +1,14 @@
 # Sprint [NUMBER]: [SPRINT NAME]
 
-**Sprint Duration:** [Start Date] to [End Date] (2 weeks)  
+**Sprint Duration:** [Start Date] to [End Date] (2 weeks) 
 **Sprint Goal:** [One sentence describing the sprint goal]
 
 ---
 
 ## Sprint Planning
 
-**Planning Date:** [Date]  
-**Sprint Capacity:** [X] Story Points  
+**Planning Date:** [Date] 
+**Sprint Capacity:** [X] Story Points 
 **Team Velocity:** [Previous sprint velocity or estimate]
 
 ---
@@ -16,9 +16,9 @@
 ## Sprint Backlog
 
 ### [US-XXX]: [User Story Title]
-**Story Points:** [X]  
-**Priority:** [High/Medium/Low]  
-**Status:** [To Do/In Progress/Done]  
+**Story Points:** [X] 
+**Priority:** [High/Medium/Low] 
+**Status:** [To Do/In Progress/Done] 
 **Assignee:** [Name]
 
 **Tasks:**
@@ -37,13 +37,13 @@
 ## Daily Standups
 
 ### Day 1 - [Date]
-**What did I do yesterday?**  
+**What did I do yesterday?** 
 - [Update]
 
-**What will I do today?**  
+**What will I do today?** 
 - [Update]
 
-**Blockers?**  
+**Blockers?** 
 - [Update]
 
 ---
@@ -54,17 +54,17 @@
 
 ## Sprint Progress
 
-**Completed Story Points:** 0 / [Total]  
+**Completed Story Points:** 0 / [Total] 
 **Completion:** 0%
 
 **Burndown Chart:**
 ```
-Day  | Planned | Completed | Remaining
+Day | Planned | Completed | Remaining
 -----|---------|-----------|----------
- 1   |   [X]   |     0     |    [X]
- 2   |   [X]   |     0     |    [X]
+ 1 | [X] | 0 | [X]
+ 2 | [X] | 0 | [X]
 ...
-10   |   [X]   |     0     |     0
+10 | [X] | 0 | 0
 ```
 
 ---
@@ -113,5 +113,4 @@ Day  | Planned | Completed | Remaining
 ## Notes
 
 [Additional notes]
-
 

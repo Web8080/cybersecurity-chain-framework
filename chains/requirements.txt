@@ -9,7 +9,6 @@
 # networkx>=3.1
 
 # Optional: For export formats
-# pandas>=2.0.0  # For CSV exports
-# openpyxl>=3.1.0  # For Excel exports
-
+# pandas>=2.0.0 # For CSV exports
+# openpyxl>=3.1.0 # For Excel exports
 

@@ -1,6 +1,6 @@
 # Java Code Analysis - API Endpoint Discovery
 
-## 🔍 Analysis Strategy
+## Analysis Strategy
 
 ### 1. Search for API Client Classes
 - Look for classes with "Api", "Client", "Service" in names
@@ -22,7 +22,7 @@
 - Identify authentication mechanisms
 - Look for API key storage
 
-## 📋 Search Commands
+## Search Commands
 
 ```bash
 # Find API classes
@@ -38,7 +38,7 @@ grep -r "BASE_URL\|baseUrl" . --include="*.java" -i
 grep -r "irobotapi\|\.irobot\." . --include="*.java" -i
 ```
 
-## 🎯 Key Areas to Analyze
+## Key Areas to Analyze
 
 ### iRobot-Specific
 - `com.irobot.*` packages
@@ -52,8 +52,7 @@ grep -r "irobotapi\|\.irobot\." . --include="*.java" -i
 - Firebase integrations
 - Service clients
 
-## 📝 Findings
+## Findings
 
 [Will be populated from analysis results]
-
 
