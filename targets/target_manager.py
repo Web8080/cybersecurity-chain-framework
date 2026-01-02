@@ -58,6 +58,12 @@ class Target:
  def check_status(self) -> TargetStatus:
   """Check if target is running"""
   if self.docker_container:
+   # Check if Docker is available
+   try:
+    subprocess.run(["docker", "--version"], capture_output=True, check=True, timeout=2)
+   except (subprocess.CalledProcessError, FileNotFoundError, subprocess.TimeoutExpired):
+    return TargetStatus.UNKNOWN  # Return unknown if Docker not available
+   
    try:
     result = subprocess.run(
      ["docker", "ps", "--format", "{{.Names}}"],
@@ -92,52 +98,168 @@ class Target:
  def start(self) -> bool:
   """Start the target"""
   if self.docker_container:
+   # Check if Docker is available
+   docker_path = self._find_docker()
+   if not docker_path:
+    raise FileNotFoundError("Docker is not installed or not in PATH. Please install Docker Desktop from https://www.docker.com/products/docker-desktop/")
+   
+   # Verify Docker is actually running
+   try:
+    check_result = subprocess.run(
+     [docker_path, "ps"],
+     capture_output=True,
+     text=True,
+     timeout=5
+    )
+    if check_result.returncode != 0:
+     error_msg = check_result.stderr.strip() if check_result.stderr else "Unknown error"
+     if "Cannot connect to the Docker daemon" in error_msg or "Is the docker daemon running" in error_msg:
+      raise RuntimeError("Docker Desktop is not running. Please start Docker Desktop and try again.")
+   except subprocess.TimeoutExpired:
+    raise RuntimeError("Docker command timed out. Docker Desktop may not be running.")
+   except FileNotFoundError:
+    raise FileNotFoundError("Docker is not installed or not in PATH. Please install Docker Desktop from https://www.docker.com/products/docker-desktop/")
+   
    try:
     # Check if container exists
     result = subprocess.run(
-     ["docker", "ps", "-a", "--format", "{{.Names}}"],
+     [docker_path, "ps", "-a", "--format", "{{.Names}}"],
      capture_output=True,
-     text=True
+     text=True,
+     timeout=10
     )
+    
+    if result.returncode != 0:
+     error_msg = result.stderr.strip() if result.stderr else "Unknown error"
+     if "Cannot connect to the Docker daemon" in error_msg:
+      raise RuntimeError("Docker Desktop is not running. Please start Docker Desktop and try again.")
+     raise RuntimeError(f"Docker command failed: {error_msg}")
     
     if self.docker_container in result.stdout:
      # Start existing container
-     subprocess.run(
-      ["docker", "start", self.docker_container],
-      check=True,
-      capture_output=True
+     start_result = subprocess.run(
+      [docker_path, "start", self.docker_container],
+      check=False,
+      capture_output=True,
+      text=True,
+      timeout=10
      )
+     if start_result.returncode != 0:
+      error_msg = start_result.stderr.strip() if start_result.stderr else "Unknown error"
+      raise RuntimeError(f"Failed to start container: {error_msg}")
     elif self.docker_image:
      # Create and start new container
      cmd = [
-      "docker", "run", "-d",
+      docker_path, "run", "-d",
       "--name", self.docker_container,
       "-p", f"{self.port}:{self.port}",
       self.docker_image
      ]
-     subprocess.run(cmd, check=True, capture_output=True)
+     run_result = subprocess.run(cmd, check=False, capture_output=True, text=True, timeout=30)
+     if run_result.returncode != 0:
+      error_msg = run_result.stderr.strip() if run_result.stderr else "Unknown error"
+      raise RuntimeError(f"Failed to create container: {error_msg}")
     else:
      return False
     
     return True
-   except subprocess.CalledProcessError:
-    return False
+   except subprocess.TimeoutExpired:
+    raise RuntimeError("Docker command timed out. The operation may be taking too long.")
+   except RuntimeError:
+    raise  # Re-raise RuntimeError
+   except Exception as e:
+    raise RuntimeError(f"Unexpected error: {str(e)}")
   
   return False
  
  def stop(self) -> bool:
   """Stop the target"""
   if self.docker_container:
+   docker_path = self._find_docker()
+   if not docker_path:
+    raise FileNotFoundError("Docker is not installed or not in PATH. Please install Docker Desktop from https://www.docker.com/products/docker-desktop/")
+   
+   # Verify Docker is actually running
    try:
-    subprocess.run(
-     ["docker", "stop", self.docker_container],
-     check=True,
-     capture_output=True
+    check_result = subprocess.run(
+     [docker_path, "ps"],
+     capture_output=True,
+     text=True,
+     timeout=5
     )
+    if check_result.returncode != 0:
+     error_msg = check_result.stderr.strip() if check_result.stderr else "Unknown error"
+     if "Cannot connect to the Docker daemon" in error_msg or "Is the docker daemon running" in error_msg:
+      raise RuntimeError("Docker Desktop is not running. Please start Docker Desktop and try again.")
+   except subprocess.TimeoutExpired:
+    raise RuntimeError("Docker command timed out. Docker Desktop may not be running.")
+   except FileNotFoundError:
+    raise FileNotFoundError("Docker is not installed or not in PATH. Please install Docker Desktop from https://www.docker.com/products/docker-desktop/")
+   
+   try:
+    stop_result = subprocess.run(
+     [docker_path, "stop", self.docker_container],
+     check=False,
+     capture_output=True,
+     text=True,
+     timeout=10
+    )
+    if stop_result.returncode != 0:
+     error_msg = stop_result.stderr.strip() if stop_result.stderr else "Unknown error"
+     if "Cannot connect to the Docker daemon" in error_msg:
+      raise RuntimeError("Docker Desktop is not running. Please start Docker Desktop and try again.")
+     # Container might not be running, which is OK
+     if "is not running" in error_msg.lower():
+      return True  # Already stopped
+     raise RuntimeError(f"Failed to stop container: {error_msg}")
     return True
-   except subprocess.CalledProcessError:
-    return False
+   except subprocess.TimeoutExpired:
+    raise RuntimeError("Docker command timed out. The operation may be taking too long.")
+   except RuntimeError:
+    raise  # Re-raise RuntimeError
+   except Exception as e:
+    raise RuntimeError(f"Unexpected error: {str(e)}")
   return False
+ 
+ def _find_docker(self) -> Optional[str]:
+  """Find docker executable in common locations"""
+  # Check common paths
+  common_paths = [
+   "/usr/local/bin/docker",
+   "/opt/homebrew/bin/docker",
+   "/Applications/Docker.app/Contents/Resources/bin/docker"
+  ]
+  
+  for path in common_paths:
+   if os.path.exists(path):
+    return path
+  
+  # Try PATH
+  try:
+   result = subprocess.run(
+    ["which", "docker"],
+    capture_output=True,
+    text=True,
+    timeout=2
+   )
+   if result.returncode == 0 and result.stdout.strip():
+    return result.stdout.strip()
+  except:
+   pass
+  
+  # Try direct execution
+  try:
+   result = subprocess.run(
+    ["docker", "--version"],
+    capture_output=True,
+    timeout=2
+   )
+   if result.returncode == 0:
+    return "docker"
+  except:
+   pass
+  
+  return None
 
 class TargetManager:
  """Manages multiple pentesting targets"""
