@@ -4,6 +4,14 @@
 
 A comprehensive framework for analyzing, documenting, and visualizing multi-step cybersecurity attack chains. This framework helps security researchers and pentesters identify, validate, and report on complex attack scenarios across various targets.
 
+## Dashboard
+
+![Dashboard Screenshot](images/dashboard.png)
+
+**Real-Time Target Status Dashboard** - Monitor all pentesting targets, start/stop containers, and view attack chains in real-time.
+
+Access the dashboard at: `http://localhost:5001` (after starting `python3 dashboard/app.py`)
+
 ## Overview
 
 The Attack Chain Analyzer Framework provides tools for:
@@ -172,6 +180,7 @@ See [LICENSE](LICENSE) file for details.
 
 - **Sprint 1**: ✅ Complete (21/21 points)
 - **Sprint 2**: ✅ Complete (21/21 points)
+- **Sprint 3**: ✅ Complete (21/21 points)
 
 ## Repository
 
