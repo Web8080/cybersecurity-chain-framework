@@ -5,7 +5,7 @@
   "end_date": "2026-02-12",
   "goal": "Build real-time dashboard and CI/CD integration for enhanced workflow",
   "capacity": 21,
-  "velocity": null,
+  "velocity": 21,
   "stories": [
     {
       "id": "US-006",
@@ -13,7 +13,7 @@
       "description": "Web-based dashboard showing all target statuses with real-time updates",
       "story_points": 13,
       "priority": "Medium",
-      "status": "To Do",
+      "status": "Done",
       "assignee": null,
       "tasks": [
         "Create web-based dashboard",
@@ -30,7 +30,7 @@
       "description": "GitHub Actions workflow for automated chain validation and testing",
       "story_points": 5,
       "priority": "Low",
-      "status": "To Do",
+      "status": "Done",
       "assignee": null,
       "tasks": [
         "Create GitHub Actions workflow",
@@ -47,7 +47,7 @@
       "description": "Analyze and visualize dependencies between attack chains",
       "story_points": 8,
       "priority": "Low",
-      "status": "To Do",
+      "status": "Done",
       "assignee": null,
       "tasks": [
         "Map chain dependencies",
